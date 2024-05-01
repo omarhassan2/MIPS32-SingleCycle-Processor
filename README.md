@@ -10,9 +10,13 @@ This repository contains an implementation of a single cycle processor that adhe
 
 ## Features
 
-🛠 **Single Cycle Execution:** Each instruction is executed in a single clock cycle.
+🤖 **Single Cycle Execution:** Each instruction is executed in a single clock cycle.
 🔧 **MIPS ISA Support:** Implements the MIPS ISA 32-bit instructions.
 🔢 **Basic Components:** The processor consists of essential components like ALU, registers, control unit, and memory.
+
+## Architecture
+
+![Architecture](/MIPS32-SingleCycle-Processor.jpg)
 
 ## Getting Started
 
@@ -23,11 +27,3 @@ This repository contains an implementation of a single cycle processor that adhe
 3. **Simulation:** Use a Verilog/VHDL simulator to simulate the processor and test its functionality.
 4. **Integration:** Integrate the processor into your desired hardware environment or FPGA platform.
 5. **Contribute:** Feel free to contribute to the project by submitting bug fixes, improvements, or new features through pull requests.
-
-## Architecture
-
-![Architecture](/MIPS32-SingleCycle-Processor.jpg)
-
-## License
-
-📝 This project is licensed under the [MIT License](LICENSE).
