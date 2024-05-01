@@ -18,7 +18,7 @@ This repository contains an implementation of a single cycle processor that adhe
 
 🏁 To get started with this project, follow these steps:
 
-1. **Clone the Repository:** `git clone https://github.com/yourusername/MIPS32-SingleCycle-Processor.git`
+1. **Clone the Repository:** `git clone https://github.com/omarhassan2/MIPS32-SingleCycle-Processor.git`
 2. **Explore the Code:** Review the Verilog/VHDL code files to understand the processor's implementation.
 3. **Simulation:** Use a Verilog/VHDL simulator to simulate the processor and test its functionality.
 4. **Integration:** Integrate the processor into your desired hardware environment or FPGA platform.
