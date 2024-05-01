@@ -24,6 +24,7 @@ To get started with this project, follow these steps:
 
 ## Architecture
 
+![Architecture](/MIPS32-SingleCycle-Processor.jpg)
 
 ## License
 
