@@ -22,13 +22,8 @@ To get started with this project, follow these steps:
 4. **Integration:** Integrate the processor into your desired hardware environment or FPGA platform.
 5. **Contribute:** Feel free to contribute to the project by submitting bug fixes, improvements, or new features through pull requests.
 
-## Documentation
+## Architecture
 
-For detailed documentation on the MIPS ISA and the processor's architecture, refer to the following resources:
-
-- [MIPS Architecture](https://www.mips.com/products/architectures/mips32-2/)
-- [MIPS Instruction Set Reference](https://www.mips.com/products/architectures/mips32-2/mips32-architecture/)
-- [Processor Design](docs/design.md): Detailed documentation on the design and architecture of the processor.
 
 ## License
 
