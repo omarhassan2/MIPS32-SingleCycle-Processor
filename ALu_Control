@@ -6,16 +6,6 @@
 --   -<da te>: <description of changes> (optional, for major updates)
 -- =====================================================================
 
-
-
-
-
-
-
-
-
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
