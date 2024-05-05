@@ -1,0 +1,88 @@
+timestamp=1714941161494
+
+[adder]
+A/arch_adder=A/Arch_Adder 21|./../../Adder.vhdl|37|1*120285
+B/arch_adder=3*88927
+H/arch_adder=0*94499
+R=./../../Adder.vhdl|25
+V=0*6826
+
+[alu]
+A/arch_alu=A/Arch_ALU 21|./../../ALU.vhdl|42|1*117530
+B/arch_alu=3*85311
+H/arch_alu=0*92858
+R=./../../ALU.vhdl|28
+V=0*3159
+
+[datamemory]
+A/arch=21|./../../DataMemory.vhdl|39|1*130855
+B/arch=3*97526
+H/arch=0*100832
+R=./../../DataMemory.vhdl|26
+V=0*30458
+
+[instructionmemory]
+A/arch_instructionmemory=A/Arch_InstructionMemory 21|./../../InstructionMemory.vhdl|36|1*136821
+A/behavioral=A/Behavioral 21|./../../InstructionMemory.vhdl|28|1*115746
+B/arch_instructionmemory=3*99446
+B/behavioral=3*84810
+H/arch_instructionmemory=0*103267
+H/behavioral=0*89331
+R=./../../InstructionMemory.vhdl|22
+V=0*91775
+
+[multiplexer]
+A/arch_multiplexer=A/Arch_Multiplexer 21|./../../Multiplexer.vhdl|40|1*121888
+B/arch_multiplexer=3*90049
+H/arch_multiplexer=0*94821
+R=./../../Multiplexer.vhdl|27
+V=0*10197
+
+[registerfiles]
+A/arch_registerfiles=A/Arch_RegISterFiles 21|./../../RegisterFiles.vhdl|41|1*123608
+B/arch_registerfiles=3*90888
+H/arch_registerfiles=0*95221
+R=./../../RegisterFiles.vhdl|21
+V=0*19808
+
+[signextender]
+A/arch_extender=A/Arch_Extender 21|./../../sign_extender.vhdl|33|1*129421
+B/arch_extender=3*96734
+H/arch_extender=0*100365
+R=./../../sign_extender.vhdl|22
+V=0*25444
+
+[~A]
+./../../ALU.vhdl~ALU=0*0*431
+./../../ALU.vhdl~Arch_ALUALU=0*93521*94431
+./../../Adder.vhdl~Adder=0*5284*5625
+./../../Adder.vhdl~Arch_AdderAdder=0*94594*94747
+./../../DataMemory.vhdl~DataMemory=0*26518*26937
+./../../DataMemory.vhdl~archDataMemory=0*102463*103189
+./../../InstructionMemory.vhdl~Arch_InstructionMemoryInstructionMemory=0*104626*104986
+./../../InstructionMemory.vhdl~BehavioralInstructionMemory=0*90666*90990
+./../../InstructionMemory.vhdl~INstructionMemory=0*32363*32719
+./../../InstructionMemory.vhdl~InstructionMemory=0*88891*89243
+./../../Multiplexer.vhdl~Arch_MultiplexerMultiplexer=0*94928*95129
+./../../Multiplexer.vhdl~Multiplexer=0*8448*8835
+./../../RegisterFiles.vhdl~Arch_RegISterFilesRegISterFiles=0*99098*100267
+./../../RegisterFiles.vhdl~RegISterFiles=0*11921*12662
+./../../sign_extender.vhdl~Arch_ExtendersignExtender=0*100466*100740
+./../../sign_extender.vhdl~signExtender=0*23978*24261
+ModifyID=281
+Version=73
+
+[~MFT]
+0=292|0Design0.mgf|104986|66493
+1=79|1Design0.mgf|136821|115746
+3=79|3Design0.mgf|99446|84810
+
+[~U]
+adder=Adder 11|0*6011|0*6239
+alu=ALU 11|0*2132|0*2408
+datamemory=DataMemory 11|0*29446|0*29770
+instructionmemory=11|0*91088|0*91291
+multiplexer=Multiplexer 11|0*9311|0*9576
+registerfiles=RegISterFiles 11|0*17886|0*18443
+signextender=signExtender 11|0*24807|0*25006
+

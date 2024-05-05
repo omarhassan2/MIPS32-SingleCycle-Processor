@@ -1,0 +1,7 @@
+Multiplexer ENTITY
+RegISterFiles ENTITY
+signExtender ENTITY
+ALU ENTITY
+DataMemory ENTITY
+INstructionMemory ENTITY
+Adder ENTITY

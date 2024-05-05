@@ -1,36 +1,48 @@
 -- =====================================================================
--- File Name: <RegisterFiles>.vhd
--- Author(s): <Mahmoud Galal> (<mahmoudgalal173.95@gmail.com>)
--- Description: Briefly describe the file's functionality.
--- Revision History:
---   - <date>: <description of changes> (optional, for major updates)
+-- @File Name: RegISterFiles.vhd
+-- @Author: Mahmoud Galal (mahmoudgalal173.95@gmail.com)
+-- 
+-- @Description: Briefly describe the file's functionality.
+--
+-- @RevISion HIStory: 4-5-2024
 -- =====================================================================
 
-LIBRARY IEEE;
-USE IEEE.std_logic_1164.ALL;
-USE IEEE.numeric_std.ALL;
 
-ENTITY RegisterFiles IS
+
+-- =========== Libraries Section ===========
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+-- =========================================
+
+
+
+-- =========== Entities Section =============
+ENTITY RegISterFiles IS
     GENERIC (
-        NumberOfBit : INTEGER := 32;
-        NumberOfAddressBit : INTEGER := 5
+        NumberOFBit : INTEGER := 32;
+        NumberOFAddressBit : INTEGER := 5
     );
     PORT (
-        ReadRegisterOne : IN STD_LOGIC_VECTOR(NumberOfAddressBit - 1 DOWNTO 0);
-        ReadRegisterTwo : IN STD_LOGIC_VECTOR(NumberOfAddressBit - 1 DOWNTO 0);
-        WriteRegister : IN STD_LOGIC_VECTOR(NumberOfAddressBit - 1 DOWNTO 0);
-        WriteData : IN STD_LOGIC_VECTOR(NumberOfBit - 1 DOWNTO 0);
+        ReadRegISterOne : IN STD_LOGIC_VECTOR(NumberOFAddressBit - 1 DOWNTO 0);
+        ReadRegISterTwo : IN STD_LOGIC_VECTOR(NumberOFAddressBit - 1 DOWNTO 0);
+        WriteRegISter : IN STD_LOGIC_VECTOR(NumberOFAddressBit - 1 DOWNTO 0);
+        WriteData : IN STD_LOGIC_VECTOR(NumberOFBit - 1 DOWNTO 0);
         RegWrite : IN STD_LOGIC;
-        ReadDataOne : OUT STD_LOGIC_VECTOR(NumberOfBit - 1 DOWNTO 0);
-        ReadDataTwo : OUT STD_LOGIC_VECTOR(NumberOfBit - 1 DOWNTO 0)
+        ReadDataOne : OUT STD_LOGIC_VECTOR(NumberOFBit - 1 DOWNTO 0);
+        ReadDataTwo : OUT STD_LOGIC_VECTOR(NumberOFBit - 1 DOWNTO 0)
     );
-END ENTITY RegisterFiles;
+END ENTITY RegISterFiles;
+-- ==========================================
 
-ARCHITECTURE Arch_RegisterFiles OF RegisterFiles IS
 
-    TYPE RegisterFileType IS ARRAY (0 TO 2 ** NumberOfAddressBit - 1) OF STD_LOGIC_VECTOR(NumberOfBit - 1 DOWNTO 0);
 
-    SIGNAL ROM : RegisterFileType := (
+-- =========== ARCHITECTUREs Section ===========
+ARCHITECTURE Arch_RegISterFiles OF RegISterFiles IS
+
+    TYPE RegISterFileType IS ARRAY (0 TO 2 ** NumberOFAddressBit - 1) OF STD_LOGIC_VECTOR(NumberOFBit - 1 DOWNTO 0);
+
+    SIGNAL ROM : RegISterFileType := (
         x"00000000",
         x"11111111",
         x"22222222",
@@ -66,10 +78,11 @@ ARCHITECTURE Arch_RegisterFiles OF RegisterFiles IS
     );
 
 BEGIN
-    ReadDataOne <= ROM(to_integer(unsigned(ReadRegisterOne)));
-    ReadDataTwo <= ROM(to_integer(unsigned(ReadRegisterTwo)));
-    WriteProcess : PROCESS (RegWrite)
-    BEGIN
-        ROM(to_integer(unsigned(WriteRegister))) <= WriteData;
+    ReadDataOne <= ROM(to_INteger(unsigned(ReadRegISterOne)));
+    ReadDataTwo <= ROM(to_INteger(unsigned(ReadRegISterTwo)));
+    PROCESS (RegWrite)
+        BEGIN
+            ROM(to_INteger(unsigned(WriteRegISter))) <= WriteData;
     END PROCESS;
-END ARCHITECTURE Arch_RegisterFiles;
+END Arch_RegISterFiles;
+-- =========================================

@@ -1,0 +1,7 @@
+.\..\..\alu.vhdl
+.\..\..\adder.vhdl
+.\..\..\multiplexer.vhdl
+.\..\..\registerfiles.vhdl
+.\..\..\sign_extender.vhdl
+.\..\..\datamemory.vhdl
+.\..\..\instructionmemory.vhdl

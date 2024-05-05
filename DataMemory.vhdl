@@ -1,49 +1,60 @@
 -- =====================================================================
--- File Name: DataMemory.vhd
--- Author: Mohamed Gehad (ENGMGehad@gmail.com)
--- Description: DataMemory is a module that represents a memory unit. 
--- It stores data in a fixed-size array of registers. The module allows 
--- reading and writing data based on the provided address. 
--- It operates synchronously with the clock signal.
+-- @File Name: DataMemory.vhd
+-- @Author: Mohamed Gehad (ENGMGehad@gmail.com)
+-- 
+-- @Description: 
+--		- DataMemory IS a module that represents a memory unit. 
+-- 		- It stores data IN a fixed-size array OF regISters. 
+-- 		- The module ALLows readINg and writINg data based on the provided address. 
+-- 		- It operates synchronously with the clock SIGNAL.
+--
+-- @RevISion HIStory: 4-5-2024
 -- =====================================================================
 
 
 
+-- =========== Libraries Section ===========
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+-- =========================================
 
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-use ieee.std_logic_unsigned.all;
 
 
-Entity DataMemory is
-	Generic(N: integer:= 32);
-	port(
-		Address,WriteData: in std_logic_vector(N-1 downto 0);
-		clk,MemRead,MemWrite: in std_logic;
-		ReadData: out std_logic_vector(N-1 downto 0));
-end DataMemory;
+-- =========== Entities Section =============
+ENTITY DataMemory IS
+	Generic(N: INteger:= 32);
+	PORT (
+		clk,MemRead,MemWrite: IN std_logic;
+		Address,WriteData: IN std_logic_vector(N-1 DOWNTO 0);
+		ReadData: OUT std_logic_vector(N-1 DOWNTO 0)
+	);
+END DataMemory;
+-- ==========================================
 
-architecture arch of DataMemory is
-	type memory is array(15 downto 0) of std_logic_vector(31 downto 0);
-	signal DataMem: memory:=(
+
+
+-- =========== ARCHITECTUREs Section ===========
+ARCHITECTURE arch OF DataMemory IS
+	type memory IS array(15 DOWNTO 0) OF std_logic_vector(31 DOWNTO 0);
+	SIGNAL DataMem: memory:=(
 		X"00000088", X"00000000", X"00000044", X"00000033",
 		X"00000000", X"000000AA", X"00000000", X"00000000",
 		X"00000000", X"00000000", X"00000000", X"00000000",
 		X"00000000", X"00000000", X"000000BB", X"00000000"
 	);
-begin
-	process(clk)
-	begin
-		if (rising_edge(clk)) then
-			if (MemRead = '1') then 
+BEGIN
+	PROCESS(clk)
+	BEGIN
+		IF (rISINg_edge(clk)) THEN
+			IF (MemRead = '1') THEN 
 				ReadData <= DataMem(TO_INTEGER(UNSIGNED(Address)));
-			end if;
-			if (MemWrite = '1') then
+			END IF;
+			IF (MemWrite = '1') THEN
 				DataMem(TO_INTEGER(UNSIGNED(Address))) <= WriteData;
-			end if;	  
-		end if;
-	end process;
-end arch;
-		
-			
+			END IF;	  
+		END IF;
+	END PROCESS;
+END arch;
+-- =============================================		

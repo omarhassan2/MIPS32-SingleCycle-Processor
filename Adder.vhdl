@@ -1,30 +1,41 @@
 -- =====================================================================
--- File Name: Adder.vhd
--- Author: Mohamed Gehad (ENGMGehad@gmail.com)
--- Description: Adder is a module that performs addition on two input vectors.
---              It operates on fixed-size vectors and produces the sum as output.
---              The module is parameterized with the vector size (N).
--- Revision History: 4-5-2024
+-- @File Name: Adder.vhd
+-- @Author: Mohamed Gehad (ENGMGehad@gmail.com)
+--
+-- @Description: 
+--      - Adder IS a module that performs addition on two INput vectors.
+--      - It operates on fixed-size vectors and produces the sum as OUTput.
+--      - The module IS parameterized with the vector size (N).
+-- 
+-- @RevISion HIStory: 4-5-2024
 -- =====================================================================
 
 
 
+-- =========== Libraries Section ===========
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+-- =========================================
 
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-use ieee.std_logic_unsigned.all;
 
 
-Entity Adder is
-	Generic(N: integer:= 32);
-	port(
-		in0, in1: in std_logic_vector(N-1 downto 0);
-		output: out std_logic_vector(N-1 downto 0)
+-- =========== Entities Section =============
+ENTITY Adder IS
+    GENERIC(N: INteger:= 32);
+    PORT(
+        IN0, IN1: IN  std_logic_vector(N-1 DOWNTO 0);
+        OUTput:   OUT std_logic_vector(N-1 DOWNTO 0)
     );
-end Adder;
+END Adder;
+-- ==========================================
 
-architecture arch of Adder is
-begin
-	output <= in0 + in1;
-end arch;
+
+
+-- =========== ARCHITECTUREs Section ===========
+ARCHITECTURE Arch_Adder OF Adder IS
+BEGIN
+    OUTput <= IN0 + IN1;
+END Arch_Adder;
+-- =============================================

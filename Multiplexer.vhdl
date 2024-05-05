@@ -1,31 +1,44 @@
 -- =====================================================================
--- File Name: Multiplexer.vhd
--- Author: Mohamed Gehad (ENGMGehad@gmail.com)
--- Description: This is a multiplexer module with two inputs (in0 and in1), 
--- a select signal (sl), and one output (output).
--- It selects between in0 and in1 based on the value of the select signal.
--- Revision History: 4-5-2024
+-- @File Name: Multiplexer.vhd
+-- @Author: Mohamed Gehad (ENGMGehad@gmail.com)
+--
+-- @Description: 
+--		- ThIS IS a multiplexer module with :
+--				- Two INputs (IN0 and IN1). 
+-- 				- Select SIGNAL (sl).
+--				- One OUTput (OUTput).
+-- 		- It selects between IN0 and IN1 based on the value OF the select SIGNAL.
+--
+-- @RevISion HIStory: 4-5-2024
 -- =====================================================================
 
 
 
+-- =========== Libraries Section ===========
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+-- =========================================
 
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-use ieee.std_logic_unsigned.all;
 
 
-Entity Multiplexer  is
-	Generic(N: integer:= 32);
-	port(
-		in0,in1: in std_logic_vector(N-1 downto 0);
-		sl: in std_logic;
-		output: out std_logic_vector(N-1 downto 0));
-end Multiplexer ; 
+-- =========== Entities Section =============
+ENTITY Multiplexer  IS
+	Generic(N: INteger:= 32);
+	PORT(
+		sl: IN std_logic;
+		IN0,IN1: IN std_logic_vector(N-1 DOWNTO 0);
+		OUTput: OUT std_logic_vector(N-1 DOWNTO 0)
+	);
+END Multiplexer; 
+-- ==========================================
 
-architecture arch of Multiplexer is
-	begin 
-		output<= in0 when (sl='0') else in1;
-end arch;
 
+
+-- =========== Architectures Section ===========
+ARCHITECTURE Arch_Multiplexer OF Multiplexer IS
+	BEGIN 
+		OUTput<= IN0 WHEN (sl='0') ELSE IN1;
+END Arch_Multiplexer;
+-- =============================================

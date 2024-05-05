@@ -1,0 +1,43 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=1
+Current Config=compile
+
+[Configurations]
+compile=Design0
+
+[Library]
+Design0=.\Design0.lib
+
+[$LibMap$]
+Design0=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+SYNTH_TOOL=<none>
+IMPL_TOOL=<none>
+FAMILY=
+FLOWTOOLS=ONLY_IMPL
+HESPrepare=0
+[IMPLEMENTATION]
+UCF=
+[Files]
+/d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\alu.vhdl=-1
+/d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\adder.vhdl=-1
+/d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\multiplexer.vhdl=-1
+/d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\registerfiles.vhdl=-1
+/d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\sign_extender.vhdl=-1
+/d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\datamemory.vhdl=-1
+/d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\instructionmemory.vhdl=-1
+[Files.Data]
+d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\alu.vhdl=VHDL Source Code
+d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\adder.vhdl=VHDL Source Code
+d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\multiplexer.vhdl=VHDL Source Code
+d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\registerfiles.vhdl=VHDL Source Code
+d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\sign_extender.vhdl=VHDL Source Code
+d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\datamemory.vhdl=VHDL Source Code
+d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\instructionmemory.vhdl=VHDL Source Code
