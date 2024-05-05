@@ -1,5 +1,5 @@
 -- =====================================================================
--- File Name: ControlUnit.vhd
+-- File Name: ControlUnit.vhdl
 -- Author(s): Karim Elghamry (kimos20139@gmail.com)
 -- Description: The component that controls how the processor reacts to 
 --              diffrent instruction types.
@@ -25,7 +25,7 @@ ENTITY ControlUnit IS
 		RegisteryWriteEnable, RegisteryDistination, ALUSource, Branch, MemoryReadWriteEnable, BypassMemory, Jump : OUT STD_LOGIC;
         ALUControl : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
 		OPCode : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-        Funct : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+        Funct : IN STD_LOGIC_VECTOR(5 DOWNTO 0)
 	);
 END ControlUnit; 
 -- ==============================================
@@ -48,7 +48,7 @@ ARCHITECTURE Arch_ControlUnit OF ControlUnit IS
                                 OutputControl <= "1100000" & "0000";   
                             WHEN "100101" => -- OR
                                 OutputControl <= "1100000" & "0001";   
-                            WHEN "101010" => -- Set Less Than
+                            WHEN "101010" => -- Set Less Than (Comparator)
                                 OutputControl <= "1100000" & "0111";   
                             WHEN "100111" => -- NOR
                                 OutputControl <= "1100000" & "1100";   
