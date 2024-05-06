@@ -45,7 +45,7 @@ H/arch_registerfiles=0*95221
 R=./../../RegisterFiles.vhdl|21
 V=0*19808
 
-[signextender]
+[SignExtender]
 A/arch_extender=A/Arch_Extender 21|./../../sign_extender.vhdl|33|1*129421
 B/arch_extender=3*96734
 H/arch_extender=0*100365
@@ -67,8 +67,8 @@ V=0*25444
 ./../../Multiplexer.vhdl~Multiplexer=0*8448*8835
 ./../../RegisterFiles.vhdl~Arch_RegISterFilesRegISterFiles=0*99098*100267
 ./../../RegisterFiles.vhdl~RegISterFiles=0*11921*12662
-./../../sign_extender.vhdl~Arch_ExtendersignExtender=0*100466*100740
-./../../sign_extender.vhdl~signExtender=0*23978*24261
+./../../sign_extender.vhdl~Arch_ExtenderSignExtender=0*100466*100740
+./../../sign_extender.vhdl~SignExtender=0*23978*24261
 ModifyID=281
 Version=73
 
@@ -84,5 +84,5 @@ datamemory=DataMemory 11|0*29446|0*29770
 instructionmemory=11|0*91088|0*91291
 multiplexer=Multiplexer 11|0*9311|0*9576
 registerfiles=RegISterFiles 11|0*17886|0*18443
-signextender=signExtender 11|0*24807|0*25006
+SignExtender=SignExtender 11|0*24807|0*25006
 

@@ -1,6 +1,6 @@
 Multiplexer ENTITY
 RegISterFiles ENTITY
-signExtender ENTITY
+SignExtender ENTITY
 ALU ENTITY
 DataMemory ENTITY
 INstructionMemory ENTITY

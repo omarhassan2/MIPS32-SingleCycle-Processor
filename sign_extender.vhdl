@@ -1,5 +1,5 @@
 -- =====================================================================
--- @File Name: signExtENDer.vhd
+-- @File Name: SignExtender.vhd
 -- @Author:hassanAlzyat(hassanalzyatcse2022@gmail.com)
 --
 -- @Description: 
@@ -19,23 +19,23 @@ USE IEEE.STD_LOGIC_1164.ALL;
 
 
 -- =========== Entities Section =============
-ENTITY signExtender IS 
+ENTITY SignExtender IS 
 	PORT(
-		extender_INput  : IN   std_logic_vector(15 DOWNTO 0); 
-		extender_Output : OUT  std_logic_vector(31 DOWNTO 0)
+		input  : IN   std_logic_vector(15 DOWNTO 0); 
+		output : OUT  std_logic_vector(31 DOWNTO 0)
 	);
-END signExtender ;	
+END SignExtender ;	
 -- ==========================================
 
 
 
 -- =========== ARCHITECTUREs Section ===========
-ARCHITECTURE Arch_Extender OF signExtender IS
+ARCHITECTURE Arch_Extender OF SignExtender IS
 BEGIN 		 
 	-- 4X4=16 > 0
-	extender_Output <= 
-		x"0000" & extender_INput WHEN extender_INput(15)='0'ELSE
-		x"FFFF" & extender_INput;
+	output <= 
+		x"0000" & input WHEN input(15)='0'ELSE
+		x"FFFF" & input;
 END Arch_Extender ;
 -- =============================================
 

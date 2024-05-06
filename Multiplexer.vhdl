@@ -1,5 +1,5 @@
 -- =====================================================================
--- @File Name: Multiplexer.vhd
+-- @File Name: Multiplexer.vhdl
 -- @Author: Mohamed Gehad (ENGMGehad@gmail.com)
 --
 -- @Description: 
@@ -25,7 +25,7 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- =========== Entities Section =============
 ENTITY Multiplexer  IS
-	Generic(N: INteger:= 32);
+	GENERIC(N: INteger:= 32);
 	PORT(
 		sl: IN std_logic;
 		IN0,IN1: IN std_logic_vector(N-1 DOWNTO 0);

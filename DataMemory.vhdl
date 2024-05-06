@@ -24,7 +24,7 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- =========== Entities Section =============
 ENTITY DataMemory IS
-	Generic(N: INteger:= 32);
+	GENERIC(N: INteger:= 32);
 	PORT (
 		clk,MemRead,MemWrite: IN std_logic;
 		Address,WriteData: IN std_logic_vector(N-1 DOWNTO 0);

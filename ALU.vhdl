@@ -47,38 +47,37 @@ BEGIN
 			CASE  Alu_Control IS 
 				-- Bitwise AND
 				WHEN "0000"=>	 
-					Alu_OUTput_SIGNAL <=  (Alu_INput_One and  Alu_INput_Two);	 
+					Alu_OUTput_SIGNAL <= (Alu_INput_One and  Alu_INput_Two);	 
 				
 				-- Bitwise OR	
 				WHEN "0001"=>	 
-					Alu_OUTput_SIGNAL <=  (Alu_INput_One or  Alu_INput_Two);
+					Alu_OUTput_SIGNAL <= (Alu_INput_One or  Alu_INput_Two);
+
+				-- Bitwise NOR
+				WHEN "1100"=>	 
+				Alu_OUTput_SIGNAL <=  (Alu_INput_One NOR Alu_INput_Two);
 
 				-- Add
 				WHEN "0010"=>	 
-					Alu_OUTput_SIGNAL <=  (Alu_INput_One +  Alu_INput_Two);
+					Alu_OUTput_SIGNAL <=  (Alu_INput_One + Alu_INput_Two);
 
 				-- Sub
 				WHEN "0110"=>	 
-					Alu_OUTput_SIGNAL <=  (Alu_INput_One -  Alu_INput_Two);
+					Alu_OUTput_SIGNAL <=  (Alu_INput_One - Alu_INput_Two);
 					
-					
+				-- Comparator
 				WHEN "0111"=>	  
 					IF(Alu_INput_One < Alu_INput_Two) THEN 
-						Alu_OUTput_SIGNAL<=x"00000001"	;
+						Alu_OUTput_SIGNAL <= x"00000001";
 					ELSE 
-						Alu_OUTput_SIGNAL<=x"00000000"	;
+						Alu_OUTput_SIGNAL <= x"00000000";
 					END IF;
-
-
-				WHEN "1100"=>	 
-					Alu_OUTput_SIGNAL <=  (Alu_INput_One NOR Alu_INput_Two);
-
 					
 				WHEN OTHERS=>	 
 					Alu_OUTput_SIGNAL <= x"00000000";  
 			END CASE;
 	END PROCESS;		   
 		Alu_OUTput <= Alu_OUTput_SIGNAL;
-		zero_Flag <= '1' WHEN Alu_OUTput_SIGNAL = x"00000000"ELSE '0';							   
+		zero_Flag  <= '1' WHEN Alu_OUTput_SIGNAL = x"00000000" ELSE '0';							   
 END Arch_ALU;
 -- =============================================

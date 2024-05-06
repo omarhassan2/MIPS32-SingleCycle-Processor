@@ -12,5 +12,5 @@
 ~A 1 "./../../RegisterFiles.vhdl" 41 arch_registerfiles
 ~E 1 "./../../Multiplexer.vhdl" 27 multiplexer
 ~A 1 "./../../Multiplexer.vhdl" 40 arch_multiplexer
-~E 1 "./../../sign_extender.vhdl" 22 signextender
+~E 1 "./../../sign_extender.vhdl" 22 SignExtender
 ~A 1 "./../../sign_extender.vhdl" 33 arch_extender
