@@ -120,3 +120,30 @@ component ProgramCounter IS
 	);
 END component; 
 -- ==========================================
+
+
+-- ============ ControlUnit ==============
+component ControlUnit IS
+    PORT(
+        RegisteryWriteEnable, RegisteryDistination, 
+        ALUSource, Branch, MemoryReadWriteEnable, 
+        BypassMemory, Jump   : OUT STD_LOGIC;
+        ALUControl           : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+        OPCode, Funct        : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+    );
+END component; 
+-- ==========================================
+
+
+-- ================== MIPS ==================
+component MIPS IS
+    PORT(
+        ALU_Output, WriteData, PC : OUT STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+        Instruction, ReadData : IN STD_LOGIC_VECTOR(N-1 DOWNTO 0);
+        MemoryReadWriteEnable : OUT STD_LOGIC;
+        clk, reset : IN STD_LOGIC
+    );
+END component; 
+-- ==========================================
+
+
