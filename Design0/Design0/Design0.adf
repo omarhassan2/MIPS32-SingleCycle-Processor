@@ -26,17 +26,31 @@ HESPrepare=0
 [IMPLEMENTATION]
 UCF=
 [Files]
+/d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\mips.vhdl=-1
+/d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\datapath.vhdl=-1
 /d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\alu.vhdl=-1
 /d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\adder.vhdl=-1
+/d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\packages.vhdl=-1
+/d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\controlunit.vhdl=-1
 /d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\multiplexer.vhdl=-1
+/d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\programcounter.vhdl=-1
+/d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\toplevel.vhdl=-1
+/d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\shiftleft2.vhdl=-1
 /d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\registerfiles.vhdl=-1
 /d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\sign_extender.vhdl=-1
 /d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\datamemory.vhdl=-1
 /d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\instructionmemory.vhdl=-1
 [Files.Data]
+d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\mips.vhdl=VHDL Source Code
+d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\datapath.vhdl=VHDL Source Code
 d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\alu.vhdl=VHDL Source Code
 d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\adder.vhdl=VHDL Source Code
+d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\packages.vhdl=VHDL Source Code
+d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\controlunit.vhdl=VHDL Source Code
 d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\multiplexer.vhdl=VHDL Source Code
+d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\programcounter.vhdl=VHDL Source Code
+d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\toplevel.vhdl=VHDL Source Code
+d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\shiftleft2.vhdl=VHDL Source Code
 d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\registerfiles.vhdl=VHDL Source Code
 d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\sign_extender.vhdl=VHDL Source Code
 d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\datamemory.vhdl=VHDL Source Code

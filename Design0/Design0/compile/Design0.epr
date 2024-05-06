@@ -1,8 +1,2 @@
-"D:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\ALU.vhdl" Design0 1 0 0
-"D:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Adder.vhdl" Design0 1 0 0
-"D:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Multiplexer.vhdl" Design0 1 0 0
-"D:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\RegisterFiles.vhdl" Design0 1 0 0
-"D:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\sign_extender.vhdl" Design0 1 0 0
-"D:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\DataMemory.vhdl" Design0 1 0 0
-"D:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\InstructionMemory.vhdl" Design0 1 0 0
+"D:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\TopLevel.vhdl" Design0 0 0 0
 . . 0 0 0

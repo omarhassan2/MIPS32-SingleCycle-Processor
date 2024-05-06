@@ -1,6 +1,7 @@
 -- =====================================================================
--- File Name: MIPS.vhdl
--- Author(s): Karim Elghamry (kimos20139@gmail.com)
+-- File Name: TopLevel.vhdl
+-- Author(s): Karim Elghamry (kimos20139@gmail.com)  
+--            Omar Hassan (oh458886@gmail.com)
 -- Description: Combine DataPath and ControlUnit
 -- Revision History:
 --   5/6/2024: Initial
@@ -19,9 +20,9 @@ USE WORK.Packages.ALL;
 -- ============= Entities Section ===============
 ENTITY TopLevel IS
 	PORT(
-        clk, reset : IN STD_LOGIC
-		WriteData, DataAddress : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-        MemoryReadWriteEnable : BUFFER STD_LOGIC;
+        clk, reset : IN STD_LOGIC;
+		WriteData, ALU_Output : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+        MemoryReadWriteEnable : BUFFER STD_LOGIC
 	);
 END TopLevel; 
 -- ==============================================
@@ -29,11 +30,33 @@ END TopLevel;
 
 
 -- =========== Architectures Section ============
-ARCHITECTURE Arch_MIPS OF MIPS IS
+ARCHITECTURE Arch_TopLevel OF TopLevel IS
+    signal PC, Instruction,
+    ReadData: STD_LOGIC_VECTOR (31 downto 0);
+BEGIN 
+    Processor: MIPS PORT MAP (
+        ALU_Output,
+        WriteData,
+        PC,
+        Instruction,
+        ReadData,
+        MemoryReadWriteEnable,
+        clk, 
+        reset
+    );
 
+    InstructionMemory: InstructionMemory PORT MAP (
+        PC,
+        Instruction
+    );
 
-        BEGIN 
-            Processor: MIPS PORT MAP ();
+    DataMemory: DataMemory PORT MAP (
+        clk, 
+        MemoryReadWriteEnable,
+        ALU_Output,
+        WriteData,
+        ReadData
+    );
 
-END Arch_MIPS;
+END Arch_TopLevel;
 -- ==============================================

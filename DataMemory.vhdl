@@ -36,7 +36,7 @@ END DataMemory;
 
 -- =========== ARCHITECTUREs Section ===========
 ARCHITECTURE arch OF DataMemory IS
-	type memory IS array(15 DOWNTO 0) OF std_logic_vector(31 DOWNTO 0);
+	type memory IS array (0 to 1023) OF std_logic_vector(31 DOWNTO 0);
 	SIGNAL DataMem: memory:=(
 		X"00000088", X"00000000", X"00000044", X"00000033",
 		X"00000000", X"000000AA", X"00000000", X"00000000",

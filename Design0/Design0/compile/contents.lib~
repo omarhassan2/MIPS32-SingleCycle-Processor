@@ -1,16 +1,26 @@
-281
-~E 1 "./../../InstructionMemory.vhdl" 22 instructionmemory
-~A 1 "./../../InstructionMemory.vhdl" 28 behavioral
-~A 1 "./../../InstructionMemory.vhdl" 36 arch_instructionmemory
+637
+~E 1 "./../../Multiplexer.vhdl" 27 multiplexer
+~A 1 "./../../Multiplexer.vhdl" 40 arch_multiplexer
+~E 1 "./../../DataMemory.vhdl" 26 datamemory
+~A 1 "./../../DataMemory.vhdl" 38 arch
 ~E 1 "./../../ALU.vhdl" 28 alu
 ~A 1 "./../../ALU.vhdl" 42 arch_alu
 ~E 1 "./../../Adder.vhdl" 25 adder
-~A 1 "./../../Adder.vhdl" 37 arch_adder
-~E 1 "./../../DataMemory.vhdl" 26 datamemory
-~A 1 "./../../DataMemory.vhdl" 39 arch
+~A 1 "./../../Adder.vhdl" 36 arch_adder
+~E 1 "./../../ControlUnit.vhdl" 22 controlunit
+~A 1 "./../../ControlUnit.vhdl" 36 arch_controlunit
+~E 1 "./../../InstructionMemory.vhdl" 25 instructionmemory
+~A 1 "./../../InstructionMemory.vhdl" 36 arch_instructionmemory
+~E 1 "./../../DataPath.vhdl" 23 datapath
+~A 1 "./../../DataPath.vhdl" 46 arch_datapath
+~E 1 "./../../MIPS.vhdl" 20 mips
+~A 1 "./../../MIPS.vhdl" 33 arch_mips
+~E 1 "./../../ShiftLeft2.vhdl" 24 shiftleft2
+~A 1 "./../../ShiftLeft2.vhdl" 35 arch_shiftleft2
+~E 1 "./../../ProgramCounter.vhdl" 23 programcounter
+~A 1 "./../../ProgramCounter.vhdl" 35 arch_programcounter
 ~E 1 "./../../RegisterFiles.vhdl" 21 registerfiles
-~A 1 "./../../RegisterFiles.vhdl" 41 arch_registerfiles
-~E 1 "./../../Multiplexer.vhdl" 27 multiplexer
-~A 1 "./../../Multiplexer.vhdl" 40 arch_multiplexer
-~E 1 "./../../sign_extender.vhdl" 22 SignExtender
+~A 1 "./../../RegisterFiles.vhdl" 38 arch_registerfiles
+~E 1 "./../../sign_extender.vhdl" 22 signextender
 ~A 1 "./../../sign_extender.vhdl" 33 arch_extender
+~E 1 "./../../TopLevel.vhdl" 21 toplevel

@@ -37,9 +37,9 @@ END ENTITY RegISterFiles;
 -- =========== ARCHITECTUREs Section ===========
 ARCHITECTURE Arch_RegISterFiles OF RegISterFiles IS
 
-    TYPE RegISterFileType IS ARRAY (0 TO 2 ** NumberOFAddressBit - 1) OF STD_LOGIC_VECTOR(NumberOFBit - 1 DOWNTO 0);
+    TYPE RegISterFileType IS ARRAY (0 TO 31) OF STD_LOGIC_VECTOR(31 DOWNTO 0);
 
-    SIGNAL ROM : RegISterFileType := (
+    SIGNAL ROM : RegisterFileType := (
         x"00000000",
         x"11111111",
         x"22222222",
@@ -79,7 +79,7 @@ BEGIN
     ReadDataTwo <= ROM(to_INteger(unsigned(ReadRegISterTwo)));
     PROCESS (CLK)
         BEGIN
-            IF ((rising_edge(CLK)) AND (RegWrite = '1')) THEN
+            IF ((rising_edge(CLK)) AND (WriteEnable = '1')) THEN
                 ROM(to_INteger(unsigned(WriteRegISter))) <= WriteData;
             END IF;
     END PROCESS;

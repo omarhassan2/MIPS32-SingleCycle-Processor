@@ -1,6 +1,13 @@
+.\..\..\mips.vhdl
+.\..\..\datapath.vhdl
 .\..\..\alu.vhdl
 .\..\..\adder.vhdl
+.\..\..\packages.vhdl
+.\..\..\controlunit.vhdl
 .\..\..\multiplexer.vhdl
+.\..\..\programcounter.vhdl
+.\..\..\toplevel.vhdl
+.\..\..\shiftleft2.vhdl
 .\..\..\registerfiles.vhdl
 .\..\..\sign_extender.vhdl
 .\..\..\datamemory.vhdl

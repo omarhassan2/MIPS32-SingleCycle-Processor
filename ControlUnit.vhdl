@@ -25,7 +25,7 @@ ENTITY ControlUnit IS
         ALUSource, Branch, MemoryReadWriteEnable, 
         BypassMemory, Jump : OUT STD_LOGIC;
         ALUControl : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-		OPCode, Funct : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+		OPCode, Funct : IN STD_LOGIC_VECTOR(5 DOWNTO 0)
 	);
 END ControlUnit; 
 -- ==============================================
@@ -51,8 +51,11 @@ ARCHITECTURE Arch_ControlUnit OF ControlUnit IS
                             WHEN "101010" => -- Set Less Than (Comparator)
                                 OutputControl <= "1100000" & "0111";   
                             WHEN "100111" => -- NOR
-                                OutputControl <= "1100000" & "1100";   
+								OutputControl <= "1100000" & "1100";
+							WHEN OTHERS => -- Add
+                                OutputControl <= "1100000" & "0010";
                         END CASE;
+						
                     WHEN "001000" => -- ADD Immediate 'Constant' to a registery (ADDI), ALU (ADD).
                         OutputControl <= "1010000" & "0010"; 
                     WHEN "001100" => -- SUBTRACT Immediate 'Constant' to a registery (SUBI), ALU (SUB).
@@ -64,7 +67,9 @@ ARCHITECTURE Arch_ControlUnit OF ControlUnit IS
                     WHEN "000100" => -- Branch if Equel (BEQ), ALU (SUBTRACT).
                         OutputControl <= "0001000" & "0110";
                     WHEN "000010" => -- Jump (J), ALU (DON'T CARE).
-                        OutputControl <= "0001001" & "0000";
+						OutputControl <= "0001001" & "0000";
+					WHEN OTHERS => -- Add
+                    	OutputControl <= "1100000" & "0010";
                 END CASE;
             END PROCESS;
 

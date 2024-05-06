@@ -19,7 +19,7 @@ USE WORK.Packages.ALL;
 -- ============= Entities Section ===============
 ENTITY MIPS IS
 	PORT(
-		ALU_Output, WriteData, PC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		ALU_Output, WriteData, PC : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
         Instruction, ReadData : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
         MemoryReadWriteEnable : OUT STD_LOGIC;
         clk, reset : IN STD_LOGIC
@@ -62,6 +62,7 @@ ARCHITECTURE Arch_MIPS OF MIPS IS
                 RegisteryDistination,
                 ALUSource,
                 Branch,
+				ALUControl,
                 ReadData,
                 Instruction,
                 Zero_Flag,
@@ -70,7 +71,7 @@ ARCHITECTURE Arch_MIPS OF MIPS IS
                 WriteData
             );
             
-            PCSource <= Zero_Flag AND Branch
+            PCSource <= Zero_Flag AND Branch;
 
 END Arch_MIPS;
 -- ==============================================

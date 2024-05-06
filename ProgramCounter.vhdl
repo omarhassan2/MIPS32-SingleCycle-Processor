@@ -22,9 +22,9 @@ USE IEEE.NUMERIC_STD.ALL;
 -- =========== Entities Section =============
 ENTITY ProgramCounter IS
 	PORT(
-        clk,reset : in std_logic;
-		input  : in  std_logic_vector(31 downto 0);
-        output : out std_logic_vector(31 downto 0)
+        clk,reset : IN std_logic;
+		input  : IN  std_logic_vector(31 DOWNTO 0);
+        output : OUT std_logic_vector(31 DOWNTO 0)
 	);
 END ProgramCounter; 
 -- ==========================================
@@ -34,7 +34,7 @@ END ProgramCounter;
 -- =========== Architectures Section ===========
 ARCHITECTURE Arch_ProgramCounter OF ProgramCounter IS
 BEGIN 
-	PROCESS (clk); 
+	PROCESS (clk) 
     BEGIN
         IF(reset = '1') THEN
             output <= (OTHERS => '0');

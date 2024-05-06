@@ -32,10 +32,10 @@ ENTITY DataPath IS
 		ReadData, Instruction: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 		-- Ouputs
-		Zero_Flag	: OUT STD_LOGIC;
-		PC			: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-		ALU_Output	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-		WriteData	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0)	
+		Zero_Flag	: BUFFER STD_LOGIC;
+		PC			: BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+		ALU_Output	: BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+		WriteData	: BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0)	
 	);
 END DataPath; 
 -- ==========================================
@@ -55,7 +55,7 @@ begin
 		Instruction(15 downto 0),
 		SignImme
 	);
-	SignImmeShift2: ShiftLeft2 port map(
+	SignImmeShift2_ShiftLeft2: ShiftLeft2 port map(
 		SignImme,
 		SignImmeShift2
 	);
@@ -69,19 +69,19 @@ begin
 		SignImmeShift2,
 		pcbranch
 	);
-	pcnextbr_MUX: Multiplexer port map(
+	pcnextbr_MUX: Multiplexer generic map(32) port map(
 		PCSrouce, 
 		pcplus4, 
 		pcbranch, 
 		pcnextbr
 	);
-	pcjump_MUX: Multiplexer port map(
+	pcjump_MUX: Multiplexer generic map(32) port map(
 		Jump,
 		pcnextbr,
 		pcjump,
 		pcnext
 	);
-	PC: ProgramCounter port map(
+	ProgramCounter: ProgramCounter port map(
 		clk, 
 		reset,
 		pcnext,
@@ -89,19 +89,19 @@ begin
 	);
 
 	-- register file logic
-	WriteRegister_MUX: Multiplexer port map(
+	WriteRegister_MUX: Multiplexer generic map(5) port map(
 		RegisteryDistination, 
 		Instruction(20 downto 16), 
 		Instruction(15 downto 11), 
 		WriteRegister
 	);
-	Result_MUX: Multiplexer port map(
+	Result_MUX: Multiplexer generic map(32) port map(
 		BypassMemory, 
 		ALU_Output, 
 		ReadData, 
 		result
 	);
-	RegISterFiles: RegISterFiles(
+	RegisterFiles: RegisterFiles port map(
 		clk, 
 		RegisteryWriteEnable, 
 		Instruction(25 downto 21),
@@ -113,10 +113,10 @@ begin
 	);
 
 	-- ALU logic
-	SrcB_Mux: Multiplexer port map(
+	SrcB_Mux: Multiplexer generic map(32) port map(
 		ALUSource, 
 		WriteData, 
-		signimm, 
+		SignImme, 
 		Srcb
 	);
 	ALU: ALU port map(
