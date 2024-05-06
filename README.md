@@ -1,4 +1,4 @@
-# MIPS32 SINgle Cycle PROCESSor
+# MIPS32 Single Cycle Processor
 
 🚀 Welcome to the MIPS32 SINgle Cycle PROCESSor repository! 🚀
 
@@ -16,7 +16,7 @@ ThIS repository contaINs an implementation OF a sINgle cycle PROCESSor that adhe
 
 ## ARCHITECTURE
 
-![ARCHITECTURE](/MIPS32-SINgleCycle-PROCESSor.jpg)
+![ARCHITECTURE](/MIPS32-SingleCycle-Processor.jpg)
 
 ## GettINg Started
 
