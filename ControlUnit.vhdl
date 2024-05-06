@@ -22,10 +22,11 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 ENTITY ControlUnit IS
 	Generic(N: Integer:= 32);
 	PORT(
-		RegisteryWriteEnable, RegisteryDistination, ALUSource, Branch, MemoryReadWriteEnable, BypassMemory, Jump : OUT STD_LOGIC;
+		RegisteryWriteEnable, RegisteryDistination, 
+        ALUSource, Branch, MemoryReadWriteEnable, 
+        BypassMemory, Jump : OUT STD_LOGIC;
         ALUControl : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-		OPCode : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
-        Funct : IN STD_LOGIC_VECTOR(5 DOWNTO 0)
+		OPCode, Funct : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
 	);
 END ControlUnit; 
 -- ==============================================
