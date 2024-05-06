@@ -24,11 +24,10 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- =========== Entities Section =============
 ENTITY DataMemory IS
-	GENERIC(N: INteger:= 32);
 	PORT (
-		clk,MemRead,MemWrite: IN std_logic;
-		Address,WriteData: IN std_logic_vector(N-1 DOWNTO 0);
-		ReadData: OUT std_logic_vector(N-1 DOWNTO 0)
+		clk,WriteEnable: IN std_logic;
+		Address,WriteData: IN std_logic_vector(31 DOWNTO 0);
+		ReadData: OUT std_logic_vector(31 DOWNTO 0)
 	);
 END DataMemory;
 -- ==========================================
@@ -47,11 +46,10 @@ ARCHITECTURE arch OF DataMemory IS
 BEGIN
 	PROCESS(clk)
 	BEGIN
-		IF (rISINg_edge(clk)) THEN
-			IF (MemRead = '1') THEN 
+		IF (rising_edge(clk)) THEN
+			IF (WriteEnable = '0') THEN 
 				ReadData <= DataMem(TO_INTEGER(UNSIGNED(Address)));
-			END IF;
-			IF (MemWrite = '1') THEN
+			ELSE
 				DataMem(TO_INTEGER(UNSIGNED(Address))) <= WriteData;
 			END IF;	  
 		END IF;

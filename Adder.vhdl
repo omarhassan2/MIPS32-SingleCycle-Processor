@@ -23,10 +23,9 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- =========== Entities Section =============
 ENTITY Adder IS
-    GENERIC(N: INteger:= 32);
     PORT(
-        IN0, IN1: IN  std_logic_vector(N-1 DOWNTO 0);
-        OUTput:   OUT std_logic_vector(N-1 DOWNTO 0)
+        IN0, IN1: IN  std_logic_vector(31 DOWNTO 0);
+        OUTput:   OUT std_logic_vector(31 DOWNTO 0)
     );
 END Adder;
 -- ==========================================

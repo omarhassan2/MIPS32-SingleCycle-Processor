@@ -25,11 +25,10 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- =========== Entities Section =============
 ENTITY Multiplexer  IS
-	GENERIC(N: INteger:= 32);
 	PORT(
-		sl: IN std_logic;
-		IN0,IN1: IN std_logic_vector(N-1 DOWNTO 0);
-		OUTput: OUT std_logic_vector(N-1 DOWNTO 0)
+		Selector: IN std_logic;
+		IN0,IN1: IN std_logic_vector(31 DOWNTO 0);
+		OUTput: OUT std_logic_vector(31 DOWNTO 0)
 	);
 END Multiplexer; 
 -- ==========================================
@@ -39,6 +38,6 @@ END Multiplexer;
 -- =========== Architectures Section ===========
 ARCHITECTURE Arch_Multiplexer OF Multiplexer IS
 	BEGIN 
-		OUTput<= IN0 WHEN (sl='0') ELSE IN1;
+		OUTput<= IN0 WHEN (Selector = '0') ELSE IN1;
 END Arch_Multiplexer;
 -- =============================================

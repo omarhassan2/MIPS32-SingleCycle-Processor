@@ -27,11 +27,11 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 -- =========== Entities Section =============
 ENTITY ALU IS 
 	PORT(
-		Alu_INput_One : IN  std_logic_vector(31 DOWNTO 0); 
-		Alu_INput_Two : IN  std_logic_vector(31 DOWNTO 0); 
-		Alu_Control   : IN  std_logic_vector(3 DOWNTO 0);
-		Alu_OUTput    : OUT std_logic_vector(31 DOWNTO 0);
-		zero_Flag     : OUT std_logic
+		ALU_Input_One : IN  std_logic_vector(31 DOWNTO 0); 
+		ALU_Input_Two : IN  std_logic_vector(31 DOWNTO 0); 
+		ALU_Control   : IN  std_logic_vector(3 DOWNTO 0);
+		ALU_Output    : OUT std_logic_vector(31 DOWNTO 0);
+		Zero_Flag     : OUT std_logic
 	);
 END ENTITY ;
 -- ==========================================
@@ -40,44 +40,44 @@ END ENTITY ;
 
 -- =========== Architectures Section ===========
 ARCHITECTURE Arch_ALU OF ALU IS
-	SIGNAL  Alu_OUTput_SIGNAL : std_logic_vector(31 DOWNTO 0);
+	SIGNAL  ALU_Output_SIGNAL : std_logic_vector(31 DOWNTO 0);
 BEGIN 		 
-	PROCESS(Alu_INput_One,Alu_INput_Two,Alu_Control)	 
+	PROCESS(ALU_Input_One,ALU_Input_Two,ALU_Control)	 
 		BEGIN		
-			CASE  Alu_Control IS 
+			CASE  ALU_Control IS 
 				-- Bitwise AND
 				WHEN "0000"=>	 
-					Alu_OUTput_SIGNAL <= (Alu_INput_One and  Alu_INput_Two);	 
+					ALU_Output_SIGNAL <= (ALU_Input_One and  ALU_Input_Two);	 
 				
 				-- Bitwise OR	
 				WHEN "0001"=>	 
-					Alu_OUTput_SIGNAL <= (Alu_INput_One or  Alu_INput_Two);
+					ALU_Output_SIGNAL <= (ALU_Input_One or  ALU_Input_Two);
 
 				-- Bitwise NOR
 				WHEN "1100"=>	 
-				Alu_OUTput_SIGNAL <=  (Alu_INput_One NOR Alu_INput_Two);
+				ALU_Output_SIGNAL <=  (ALU_Input_One NOR ALU_Input_Two);
 
 				-- Add
 				WHEN "0010"=>	 
-					Alu_OUTput_SIGNAL <=  (Alu_INput_One + Alu_INput_Two);
+					ALU_Output_SIGNAL <=  (ALU_Input_One + ALU_Input_Two);
 
 				-- Sub
 				WHEN "0110"=>	 
-					Alu_OUTput_SIGNAL <=  (Alu_INput_One - Alu_INput_Two);
+					ALU_Output_SIGNAL <=  (ALU_Input_One - ALU_Input_Two);
 					
 				-- Comparator
 				WHEN "0111"=>	  
-					IF(Alu_INput_One < Alu_INput_Two) THEN 
-						Alu_OUTput_SIGNAL <= x"00000001";
+					IF(ALU_Input_One < ALU_Input_Two) THEN 
+						ALU_Output_SIGNAL <= x"00000001";
 					ELSE 
-						Alu_OUTput_SIGNAL <= x"00000000";
+						ALU_Output_SIGNAL <= x"00000000";
 					END IF;
 					
 				WHEN OTHERS=>	 
-					Alu_OUTput_SIGNAL <= x"00000000";  
+					ALU_Output_SIGNAL <= x"00000000";  
 			END CASE;
 	END PROCESS;		   
-		Alu_OUTput <= Alu_OUTput_SIGNAL;
-		zero_Flag  <= '1' WHEN Alu_OUTput_SIGNAL = x"00000000" ELSE '0';							   
+		ALU_Output <= ALU_Output_SIGNAL;
+		Zero_Flag  <= '1' WHEN ALU_Output_SIGNAL = x"00000000" ELSE '0';							   
 END Arch_ALU;
 -- =============================================

@@ -21,7 +21,6 @@ USE IEEE.NUMERIC_STD.ALL;
 
 -- =========== Entities Section =============
 ENTITY ProgramCounter IS
-    GENERIC(N: Integer:= 32);
 	PORT(
         clk,reset : in std_logic;
 		input  : in  std_logic_vector(31 downto 0);

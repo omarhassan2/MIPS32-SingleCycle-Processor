@@ -19,18 +19,15 @@ USE IEEE.NUMERIC_STD.ALL;
 
 -- =========== Entities Section =============
 ENTITY RegISterFiles IS
-    GENERIC (
-        NumberOFBit : INTEGER := 32;
-        NumberOFAddressBit : INTEGER := 5
-    );
     PORT (
-        ReadRegISterOne : IN STD_LOGIC_VECTOR(NumberOFAddressBit - 1 DOWNTO 0);
-        ReadRegISterTwo : IN STD_LOGIC_VECTOR(NumberOFAddressBit - 1 DOWNTO 0);
-        WriteRegISter : IN STD_LOGIC_VECTOR(NumberOFAddressBit - 1 DOWNTO 0);
-        WriteData : IN STD_LOGIC_VECTOR(NumberOFBit - 1 DOWNTO 0);
-        RegWrite : IN STD_LOGIC;
-        ReadDataOne : OUT STD_LOGIC_VECTOR(NumberOFBit - 1 DOWNTO 0);
-        ReadDataTwo : OUT STD_LOGIC_VECTOR(NumberOFBit - 1 DOWNTO 0)
+        CLK: IN STD_LOGIC;
+        WriteEnable : IN STD_LOGIC; -- WE3 (Enable)
+        ReadRegISterOne : IN  STD_LOGIC_VECTOR(4 DOWNTO 0); -- A1
+        ReadRegISterTwo : IN  STD_LOGIC_VECTOR(4 DOWNTO 0); -- A2
+        WriteRegISter   : IN  STD_LOGIC_VECTOR(4 DOWNTO 0); -- A3
+        WriteData       : IN  STD_LOGIC_VECTOR(31 DOWNTO 0); -- WriteData
+        ReadDataOne     : OUT STD_LOGIC_VECTOR(31 DOWNTO 0); -- RD1
+        ReadDataTwo     : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)  -- RD2
     );
 END ENTITY RegISterFiles;
 -- ==========================================
@@ -80,9 +77,11 @@ ARCHITECTURE Arch_RegISterFiles OF RegISterFiles IS
 BEGIN
     ReadDataOne <= ROM(to_INteger(unsigned(ReadRegISterOne)));
     ReadDataTwo <= ROM(to_INteger(unsigned(ReadRegISterTwo)));
-    PROCESS (RegWrite)
+    PROCESS (CLK)
         BEGIN
-            ROM(to_INteger(unsigned(WriteRegISter))) <= WriteData;
+            IF ((rising_edge(CLK)) AND (RegWrite = '1')) THEN
+                ROM(to_INteger(unsigned(WriteRegISter))) <= WriteData;
+            END IF;
     END PROCESS;
 END Arch_RegISterFiles;
 -- =========================================

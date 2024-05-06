@@ -1,7 +1,7 @@
 -- =====================================================================
--- File Name: Alu_Control.vhd
+-- File Name: ALU_Control.vhd
 -- Author(s): hassan alzyat(hassanalzyatcse2022@gmail.com)
--- Description: generates the ALU_COntrol to define which operator will be excuted depends on op Instructions and control
+-- Description: generates the ALU_Control to define which operator will be excuted depends on op Instructions and control
 -- Revision History:
 --   -<da te>: <description of changes> (optional, for major updates)
 -- =====================================================================
