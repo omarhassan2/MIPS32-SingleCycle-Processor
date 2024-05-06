@@ -20,7 +20,6 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- ============= Entities Section ===============
 ENTITY ControlUnit IS
-	Generic(N: Integer:= 32);
 	PORT(
 		RegisteryWriteEnable, RegisteryDistination, 
         ALUSource, Branch, MemoryReadWriteEnable, 
