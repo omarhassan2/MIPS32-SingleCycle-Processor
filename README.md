@@ -1,4 +1,4 @@
-# MIPS32 SINgle Cycle PROCESSor
+# MIPS32 Single Cycle Processor
 
 🚀 Welcome to the MIPS32 SINgle Cycle PROCESSor repository! 🚀
 
