@@ -1,0 +1,20 @@
+$WAVE4TIMED
+$RESOLUTION 1000
+I 1 "e#9#std_logicc9 UX01ZWLH-"
+$IN 1 1 clk
+I 2 "a#29#std_logic_vector(31 downto 0)1 ricd31 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS IN 133 2 32 WriteData
+$SC 5-129/4
+$IN 1 0 clk
+I 3 "a#6#memory1 rict0 1023 a#29#std_logic_vector(31 downto 0)1 ricd31 0 e#9#std_logicc9 UX01ZWLH-"
+$BUS S 131206 3 1024 DataMem
+$SC 134-131202/4
+$IN 1 0 clk
+$IN 132231 1 WriteEnable
+$BUS IN +132 2 32 Address
+$SC +-128-+124/4
+$BUS IN +5 2 32 WriteData
+$SC 5-129/4
+$BUS OUT 132493 2 32 ReadData
+$SC +-128-+124/4
+$ENDWAVE

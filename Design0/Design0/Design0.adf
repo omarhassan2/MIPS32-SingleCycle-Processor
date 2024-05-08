@@ -29,7 +29,7 @@ UCF=
 
 [HierarchyViewer]
 SortInfo=u
-HierarchyInformation=testbench|test|0
+HierarchyInformation=datamemory|arch|0 instructionmemory|arch_instructionmemory|0 programcounter|arch_programcounter|0 testbench|test|0 
 ShowHide=ShowTopLevel
 Selected=
 
