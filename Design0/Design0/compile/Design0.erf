@@ -1,7 +1,5 @@
-MESSAGE "File: D:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\TopLevel.vhdl" 
-MESSAGE "Compile Entity "TopLevel"" 
-MESSAGE "Compile Architecture "Arch_TopLevel" of Entity "TopLevel"" 
-ERROR COMP96_0034: "Expression or keyword expected." "D:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\TopLevel.vhdl" 37 31
-ERROR COMP96_0034: "Expression or keyword expected." "D:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\TopLevel.vhdl" 39 52
-ERROR COMP96_0034: "Expression or keyword expected." "D:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\TopLevel.vhdl" 41 38
-FAILURE "Compile failure 3 Errors 0 Warnings  Analysis time :  0.0 [s]" 
+MESSAGE "File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\InstructionMemory.vhdl" 
+MESSAGE "Compile Entity "InstructionMemory"" 
+MESSAGE "Entity `InstructionMemory' has been skipped - no difference detected." 
+MESSAGE "Compile Architecture "Arch_InstructionMemory" of Entity "InstructionMemory"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [s]" 

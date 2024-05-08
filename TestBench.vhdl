@@ -13,7 +13,8 @@
 -- ============= Libraries Section ==============
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
-USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;	  
+USE WORK.Packages.ALL;
 -- ==============================================
 
 
@@ -55,8 +56,7 @@ begin
     -- check that 7 gets written to address 84 at end of program
     process (clk) begin
         if ((clk'event and clk = '0') and MemoryReadWriteEnable = '1') then
-            if ((conv_integer(DataAddress) = 84) and (conv_integer)
-                (WriteData) = 7) then
+            if ((conv_integer(DataAddress) = 84) and (conv_integer(WriteData) = 7)) then
                 report "Simulation succeeded";
             elsif (DataAddress /= 80) then
                 report "Simulation failed";

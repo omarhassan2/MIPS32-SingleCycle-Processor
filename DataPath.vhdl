@@ -27,7 +27,7 @@ ENTITY DataPath IS
 		PCSrouce: IN STD_LOGIC;
 		BypassMemory, Jump: IN STD_LOGIC;
 		RegisteryWriteEnable, RegisteryDistination: IN STD_LOGIC;
-		ALUSource, Branch : IN STD_LOGIC;
+		ALUSource: IN STD_LOGIC;
         ALUControl : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 		ReadData, Instruction: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 

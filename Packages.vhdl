@@ -145,7 +145,7 @@ COMPONENT DataPath IS
 		PCSrouce: IN STD_LOGIC;
 		BypassMemory, Jump: IN STD_LOGIC;
 		RegisteryWriteEnable, RegisteryDistination: IN STD_LOGIC;
-		ALUSource, Branch : IN STD_LOGIC;
+		ALUSource: IN STD_LOGIC;
         ALUControl : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 		ReadData, Instruction: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 
@@ -162,9 +162,9 @@ END COMPONENT;
 -- ================== MIPS ==================
 COMPONENT MIPS IS
     PORT(
-        ALU_Output, WriteData, PC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+        ALU_Output, WriteData, PC : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
         Instruction, ReadData : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-        MemoryReadWriteEnable : OUT STD_LOGIC;
+        MemoryReadWriteEnable : BUFFER STD_LOGIC;
         clk, reset : IN STD_LOGIC
     );
 END COMPONENT; 
@@ -172,7 +172,7 @@ END COMPONENT;
 
 
 -- ================== Arch_TopLevel ==================
-COMPONENT Arch_TopLevel IS
+COMPONENT TopLevel IS
     PORT(
         clk, reset : IN STD_LOGIC;
         WriteData, ALU_Output : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);

@@ -1,7 +1,15 @@
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\..\toplevel.vhdl|]
+TemplateId=0
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\..\packages.vhdl|]
+TemplateId=0
 [OPENDOC|Aldec.Hde.HdePlugIn.7|.\..\datapath.vhdl|]
 TemplateId=0
-[OPENDOC|Aldec.Hde.HdePlugIn.7|.\..\multiplexer.vhdl|]
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\..\mips.vhdl|]
 TemplateId=0
-[OPENDOC|Aldec.Hde.HdePlugIn.7|.\..\MIPS.vhdl|]
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\..\instructionmemory.vhdl|]
+TemplateId=0
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\..\controlunit.vhdl|]
+TemplateId=0
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\..\TestBench.vhdl|]
 TemplateId=0
 ActiveDocument=1

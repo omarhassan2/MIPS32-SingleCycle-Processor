@@ -34,12 +34,19 @@ END InstructionMemory;
 
 -- =========== ARCHITECTUREs Section ===========
 ARCHITECTURE Arch_InstructionMemory OF InstructionMemory IS
-    type memory IS array (0 to 1023) OF std_logic_vector(31 DOWNTO 0);
+    type memory IS array (0 to 2) OF std_logic_vector(31 DOWNTO 0);
     SIGNAL ROM: memory := (
      -- We can write the Instruction here.... 
      -- but i  will be initialize the value with zeros ....
-     OTHERS => (OTHERS => '0')
-     );
+    
+    "001000" & "00000" & "00001" & "0000000000000101", -- addi R1 = R0 + 5
+
+    "101011" & "00000" & "00001" & "0000000000000000", -- sw R1 0(R0)
+
+    "100011" & "00000" & "00010" & "0000000000000000", -- lw R2 0(R0)
+
+    OTHERS => (OTHERS => '0')	   
+    );
 BEGIN 
 	INstruction <= ROM(to_integer(unsigned(Address)));
 

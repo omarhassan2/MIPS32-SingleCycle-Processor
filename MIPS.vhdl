@@ -21,7 +21,7 @@ ENTITY MIPS IS
 	PORT(
 		ALU_Output, WriteData, PC : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
         Instruction, ReadData : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-        MemoryReadWriteEnable : OUT STD_LOGIC;
+        MemoryReadWriteEnable : BUFFER STD_LOGIC;
         clk, reset : IN STD_LOGIC
 	);
 END MIPS; 
@@ -61,7 +61,6 @@ ARCHITECTURE Arch_MIPS OF MIPS IS
                 RegisteryWriteEnable,
                 RegisteryDistination,
                 ALUSource,
-                Branch,
 				ALUControl,
                 ReadData,
                 Instruction,
