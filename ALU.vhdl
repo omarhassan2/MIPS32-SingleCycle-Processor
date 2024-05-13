@@ -40,8 +40,9 @@ END ENTITY ;
 
 -- =========== Architectures Section ===========
 ARCHITECTURE Arch_ALU OF ALU IS
-	SIGNAL  ALU_Output_SIGNAL : std_logic_vector(31 DOWNTO 0);
-BEGIN 		 
+	SIGNAL  ALU_Output_SIGNAL : std_logic_vector(31 DOWNTO 0):=X"00000000";
+BEGIN 		
+		
 	PROCESS(ALU_Input_One,ALU_Input_Two,ALU_Control)	 
 		BEGIN		
 			CASE  ALU_Control IS 
@@ -74,10 +75,13 @@ BEGIN
 					END IF;
 					
 				WHEN OTHERS=>	 
-					ALU_Output_SIGNAL <= x"00000000";  
-			END CASE;
-	END PROCESS;		   
-		ALU_Output <= ALU_Output_SIGNAL;
-		Zero_Flag  <= '1' WHEN ALU_Output_SIGNAL = x"00000000" ELSE '0';							   
+					ALU_Output_SIGNAL <= x"00000000";  	 
+			END CASE;  
+			
+			
+	END PROCESS;
+			 ALU_Output <= ALU_Output_SIGNAL; 
+			Zero_Flag  <= '1' WHEN ALU_Output_SIGNAL = x"00000000" ELSE '0';
+									   
 END Arch_ALU;
 -- =============================================

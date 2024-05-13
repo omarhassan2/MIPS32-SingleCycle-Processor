@@ -37,19 +37,21 @@ END DataMemory;
 -- =========== ARCHITECTUREs Section ===========
 ARCHITECTURE arch OF DataMemory IS
 	type memory IS array (0 to 1023) OF std_logic_vector(31 DOWNTO 0);
-	SIGNAL DataMem: memory:=(
+	SIGNAL Data: memory:=(
 		OTHERS => X"00000000"
 	);
 BEGIN
-	PROCESS(clk)
+	PROCESS(clk,Address)
 	BEGIN
-		IF (rising_edge(clk)) THEN
-			IF (WriteEnable = '0') THEN 
-				ReadData <= DataMem(TO_INTEGER(UNSIGNED(Address)));
+		IF (falling_edge(clk)) THEN
+			IF (WriteEnable = '1') THEN 
+				Data(TO_INTEGER(UNSIGNED(Address))) <= WriteData;
 			ELSE
-				DataMem(TO_INTEGER(UNSIGNED(Address))) <= WriteData;
-			END IF;	  
-		END IF;
-	END PROCESS;
+				ReadData <= Data(TO_INTEGER(UNSIGNED(Address)));	
+			END IF;	 
+		END IF;			
+	END PROCESS; 
+	
+	--ReadData <= Data(TO_INTEGER(UNSIGNED(Address))) WHEN WriteEnable = '0' AND TO_INTEGER(UNSIGNED(Address)) < 1023 ELSE X"00000000" ;
 END arch;
 -- =============================================		

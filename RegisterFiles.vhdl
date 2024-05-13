@@ -18,70 +18,39 @@ USE IEEE.NUMERIC_STD.ALL;
 
 
 -- =========== Entities Section =============
-ENTITY RegISterFiles IS
+ENTITY RegisterFiles IS
     PORT (
         CLK: IN STD_LOGIC;
         WriteEnable : IN STD_LOGIC; -- WE3 (Enable)
-        ReadRegISterOne : IN  STD_LOGIC_VECTOR(4 DOWNTO 0); -- A1
-        ReadRegISterTwo : IN  STD_LOGIC_VECTOR(4 DOWNTO 0); -- A2
-        WriteRegISter   : IN  STD_LOGIC_VECTOR(4 DOWNTO 0); -- A3
+        ReadRegisterOne : IN  STD_LOGIC_VECTOR(4 DOWNTO 0); -- A1
+        ReadRegisterTwo : IN  STD_LOGIC_VECTOR(4 DOWNTO 0); -- A2
+        WriteRegister   : IN  STD_LOGIC_VECTOR(4 DOWNTO 0); -- A3
         WriteData       : IN  STD_LOGIC_VECTOR(31 DOWNTO 0); -- WriteData
         ReadDataOne     : OUT STD_LOGIC_VECTOR(31 DOWNTO 0); -- RD1
         ReadDataTwo     : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)  -- RD2
     );
-END ENTITY RegISterFiles;
+END ENTITY RegisterFiles;
 -- ==========================================
 
 
 
 -- =========== ARCHITECTUREs Section ===========
-ARCHITECTURE Arch_RegISterFiles OF RegISterFiles IS
+ARCHITECTURE Arch_RegisterFiles OF RegisterFiles IS
 
-    TYPE RegISterFileType IS ARRAY (0 TO 31) OF STD_LOGIC_VECTOR(31 DOWNTO 0);
+    TYPE RegisterFileType IS ARRAY (0 TO 31) OF STD_LOGIC_VECTOR(31 DOWNTO 0);
 
-    SIGNAL ROM : RegisterFileType := (
-        x"00000000",
-        x"11111111",
-        x"22222222",
-        x"33333333",
-        x"44444444",
-        x"55555555",
-        x"66666666",
-        x"77777777",
-        x"88888888",
-        x"99999999",
-        x"AAAAAAAA",
-        x"BBBBBBBB",
-        x"CCCCCCCC",
-        x"DDDDDDDD",
-        x"EEEEEEEE",
-        x"FFFFFFFF",
-        x"00000000",
-        x"11111111",
-        x"22222222",
-        x"33333333",
-        x"44444444",
-        x"55555555",
-        x"66666666",
-        x"77777777",
-        x"88888888",
-        x"99999999",
-        x"AAAAAAAA",
-        x"BBBBBBBB",
-        x"10008000",
-        x"7FFFF1EC",
-        x"EEEEEEEE",
-        x"FFFFFFFF"
+    SIGNAL Registers : RegisterFileType := (
+    OTHERS => X"00000000"
     );
 
 BEGIN
-    ReadDataOne <= ROM(to_INteger(unsigned(ReadRegISterOne)));
-    ReadDataTwo <= ROM(to_INteger(unsigned(ReadRegISterTwo)));
+    ReadDataOne <= Registers(to_INteger(unsigned(ReadRegisterOne)));
+    ReadDataTwo <= Registers(to_INteger(unsigned(ReadRegisterTwo)));
     PROCESS (CLK)
         BEGIN
             IF ((rising_edge(CLK)) AND (WriteEnable = '1')) THEN
-                ROM(to_INteger(unsigned(WriteRegISter))) <= WriteData;
+                Registers(to_INteger(unsigned(WriteRegister))) <= WriteData;
             END IF;
     END PROCESS;
-END Arch_RegISterFiles;
+END Arch_RegisterFiles;
 -- =========================================

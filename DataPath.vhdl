@@ -32,46 +32,46 @@ ENTITY DataPath IS
 		ReadData, Instruction: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 		-- Ouputs
-		Zero_Flag	: BUFFER STD_LOGIC;
-		PC			: BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-		ALU_Output	: BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-		WriteData	: BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0)	
+		Zero_Flag	: OUT STD_LOGIC;
+		PC			: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		ALU_Output	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		WriteData	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0)	
 	);
 END DataPath; 
 -- ==========================================
 
 
 
--- =========== Architectures Section ===========
-ARCHITECTURE Arch_DataPath OF DataPath IS
-	signal WriteRegister: STD_LOGIC_VECTOR (4 downto 0);
-	signal pcjump, pcnext, pcnextbr, pcplus4, pcbranch: STD_LOGIC_VECTOR (31 downto 0);
-	signal SignImme, SignImmeShift2: STD_LOGIC_VECTOR (31 downto 0);
-	signal SrcA, Srcb, result: STD_LOGIC_VECTOR (31 downto 0);
-begin
+-- =========== Architectures Section =========== 
+ARCHITECTURE Arch_DataPath OF DataPath IS	   
+			  
+	signal PC_Signal,ALU_Output_Signal,WriteData_Signal : STD_LOGIC_VECTOR (31 downto 0):= X"00000000";
+	signal WriteRegister: STD_LOGIC_VECTOR (4 downto 0):="00000";
+	signal pcjump, pcnext, pcnextbr, pcplus1, pcbranch: STD_LOGIC_VECTOR (31 downto 0):= X"00000000";
+	signal SignImme: STD_LOGIC_VECTOR (31 downto 0):= X"00000000";
+	signal SrcA, Srcb, result: STD_LOGIC_VECTOR (31 downto 0):= X"00000000";
+begin	  
+	
 	-- next PC logic
-	pcjump <= (pcplus4(31 downto 28) & Instruction(25 downto 0) & "00");
+	pcjump <= (pcplus1(31 downto 26) & Instruction(25 downto 0));
 	SignExtender: SignExtender port map(
 		Instruction(15 downto 0),
 		SignImme
 	);
-	SignImmeShift2_ShiftLeft2: ShiftLeft2 port map(
-		SignImme,
-		SignImmeShift2
-	);
-	pcplus4_Adder: Adder port map(
-		PC,
-		X"00000004",
-		pcplus4
+
+	pcplus1_Adder: Adder port map(
+		PC_Signal,
+		X"00000001",
+		pcplus1
 	);
 	pcbranch_Adder: Adder port map(
-		pcplus4,
-		SignImmeShift2,
+		pcplus1,
+		SignImme,
 		pcbranch
 	);
 	pcnextbr_MUX: Multiplexer generic map(32) port map(
 		PCSrouce, 
-		pcplus4, 
+		pcplus1, 
 		pcbranch, 
 		pcnextbr
 	);
@@ -85,7 +85,7 @@ begin
 		clk, 
 		reset,
 		pcnext,
-		PC
+		PC_Signal
 	);
 
 	-- register file logic
@@ -97,7 +97,7 @@ begin
 	);
 	Result_MUX: Multiplexer generic map(32) port map(
 		BypassMemory, 
-		ALU_Output, 
+		ALU_Output_Signal, 
 		ReadData, 
 		result
 	);
@@ -109,13 +109,13 @@ begin
 		WriteRegister,
 		result,
 		SrcA,
-		WriteData
+		WriteData_Signal
 	);
 
 	-- ALU logic
 	SrcB_Mux: Multiplexer generic map(32) port map(
 		ALUSource, 
-		WriteData, 
+		WriteData_Signal, 
 		SignImme, 
 		Srcb
 	);
@@ -123,9 +123,11 @@ begin
 		SrcA, 
 		Srcb, 
 		ALUControl, 
-		ALU_Output, 
+		ALU_Output_Signal, 
 		Zero_Flag
 	);
-		
+	ALU_Output <= ALU_Output_Signal;
+	PC <= PC_Signal;
+	WriteData <= WriteData_Signal;
 END Arch_DataPath;
 -- =============================================
