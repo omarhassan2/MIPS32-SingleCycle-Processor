@@ -1,69 +1,69 @@
-timestamp=1715126316202
+timestamp=1715292837690
 
 [adder]
-A/arch_adder=A/Arch_Adder 21|./../../Adder.vhdl|36|1*1280973
-B/arch_adder=3*462534
-H/arch_adder=0*981343
+A/arch_adder=A/Arch_Adder 21|./../../Adder.vhdl|36|1*1390270
+B/arch_adder=3*490254
+H/arch_adder=0*1061764
 R=./../../Adder.vhdl|25
 V=0*6640
 
 [alu]
-A/arch_alu=A/Arch_ALU 21|./../../ALU.vhdl|42|1*1289167
-B/arch_alu=3*472483
-H/arch_alu=0*985641
+A/arch_alu=A/Arch_ALU 21|./../../ALU.vhdl|42|1*1398464
+B/arch_alu=3*500203
+H/arch_alu=0*1066062
 R=./../../ALU.vhdl|28
 V=0*3159
 
 [blockdiagram]
-A/blockdiagram=A/BlockDiagram 24|.\src\BlockDiagram.bde|10000|1*1340807
-B/blockdiagram=3*484925
-H/blockdiagram=0*1003495
+A/blockdiagram=A/BlockDiagram 24|.\src\BlockDiagram.bde|10000|1*1452282
+B/blockdiagram=3*515791
+H/blockdiagram=0*1089862
 R=./compile/BlockDiagram.vhd|25
-V=0*942558
+V=0*1106497
 
 [controlunit]
-A/arch_controlunit=A/Arch_ControlUnit 21|./../../ControlUnit.vhdl|36|1*1284724
-B/arch_controlunit=3*464239
-H/arch_controlunit=0*983376
+A/arch_controlunit=A/Arch_ControlUnit 21|./../../ControlUnit.vhdl|36|1*1394021
+B/arch_controlunit=3*491959
+H/arch_controlunit=0*1063797
 R=./../../ControlUnit.vhdl|22
 S/controlunit=S/ControlUnit 40|0|2*62274
 V=0*67725
 
 [datamemory]
-A/arch=21|./../../DataMemory.vhdl|38|1*1282404
-B/arch=3*463107
-H/arch=0*981665
+A/arch=21|./../../DataMemory.vhdl|38|1*1391701
+B/arch=3*490827
+H/arch=0*1062086
 R=./../../DataMemory.vhdl|26
 S/datamemory=S/DataMemory 40|0|2*54199
 V=0*26888
 
 [datapath]
-A/arch_datapath=A/Arch_DataPath 21|./../../DataPath.vhdl|46|1*1308546
-B/arch_datapath=3*480728
-H/arch_datapath=0*992466
+A/arch_datapath=A/Arch_DataPath 21|./../../DataPath.vhdl|46|1*1420021
+B/arch_datapath=3*511594
+H/arch_datapath=0*1078532
 R=./../../DataPath.vhdl|23
 S/datapath=40|0|2*56407
 V=0*834300
 
 [instructionmemory]
-A/arch_instructionmemory=A/Arch_InstructionMemory 21|./../../InstructionMemory.vhdl|36|1*1361085
-B/arch_instructionmemory=3*485344
-H/arch_instructionmemory=0*1034813
+A/arch_instructionmemory=A/Arch_InstructionMemory 21|./../../InstructionMemory.vhdl|36|1*1401219
+B/arch_instructionmemory=3*503819
+H/arch_instructionmemory=0*1067703
 R=./../../InstructionMemory.vhdl|25
 S/instructionmemory=S/InstructionMemory 40|0|2*51039
 V=0*31169
 
 [mips]
-A/arch_mips=A/Arch_MIPS 21|./../../mips.vhdl|33|1*1324573
-B/arch_mips=3*482073
-H/arch_mips=0*997504
+A/arch_mips=A/Arch_MIPS 21|./../../mips.vhdl|33|1*1436048
+B/arch_mips=3*512939
+H/arch_mips=0*1083570
 R=./../../mips.vhdl|20
 V=0*841546
 
 [multiplexer]
-A/arch_multiplexer=A/Arch_Multiplexer 21|./../../Multiplexer.vhdl|40|1*1291922
-B/arch_multiplexer=3*476099
-H/arch_multiplexer=0*987282
+A/arch_multiplexer=A/Arch_Multiplexer 21|./../../Multiplexer.vhdl|40|1*1403397
+B/arch_multiplexer=3*506965
+H/arch_multiplexer=0*1073348
 R=./../../Multiplexer.vhdl|27
 V=0*326073
 
@@ -73,93 +73,93 @@ R=./../../Packages.vhdl|22
 V=0*792109
 
 [programcounter]
-A/arch_programcounter=A/Arch_ProgramCounter 21|./../../ProgramCounter.vhdl|35|1*1306862
-B/arch_programcounter=3*479918
-H/arch_programcounter=0*991963
+A/arch_programcounter=A/Arch_ProgramCounter 21|./../../ProgramCounter.vhdl|35|1*1418337
+B/arch_programcounter=3*510784
+H/arch_programcounter=0*1078029
 R=./../../ProgramCounter.vhdl|23
 V=0*464166
 
 [registerfiles]
-A/arch_registerfiles=A/Arch_RegISterFiles 21|./../../RegisterFiles.vhdl|38|1*1293666
-B/arch_registerfiles=3*476938
-H/arch_registerfiles=0*987688
+A/arch_registerfiles=A/Arch_RegISterFiles 21|./../../RegisterFiles.vhdl|38|1*1405141
+B/arch_registerfiles=3*507804
+H/arch_registerfiles=0*1073754
 R=./../../RegisterFiles.vhdl|21
 V=0*17538
 
 [shiftleft2]
-A/arch_shiftleft2=A/Arch_ShiftLeft2 21|./../../ShiftLeft2.vhdl|35|1*1305438
-B/arch_shiftleft2=3*479388
-H/arch_shiftleft2=0*991550
+A/arch_shiftleft2=A/Arch_ShiftLeft2 21|./../../ShiftLeft2.vhdl|35|1*1416913
+B/arch_shiftleft2=3*510254
+H/arch_shiftleft2=0*1077616
 R=./../../ShiftLeft2.vhdl|24
 V=0*14366
 
 [signextender]
-A/arch_extender=A/Arch_Extender 21|./../../sign_extender.vhdl|33|1*1304022
-B/arch_extender=3*478596
-H/arch_extender=0*991119
+A/arch_extender=A/Arch_Extender 21|./../../sign_extender.vhdl|33|1*1415497
+B/arch_extender=3*509462
+H/arch_extender=0*1077185
 R=./../../sign_extender.vhdl|22
 V=0*22135
 
 [testbench]
-A/test=21|./../../TestBench.vhdl|26|1*1337910
-B/test=3*482489
-H/test=0*1001657
+A/test=21|./../../TestBench.vhdl|26|1*1449385
+B/test=3*513355
+H/test=0*1087723
 R=./../../TestBench.vhdl|22
 V=0*849297
 
 [toplevel]
-A/arch_toplevel=A/Arch_TopLevel 21|./../../TopLevel.vhdl|33|1*1332612
-H/arch_toplevel=0*999885
+A/arch_toplevel=A/Arch_TopLevel 21|./../../TopLevel.vhdl|33|1*1444087
+H/arch_toplevel=0*1085951
 R=./../../TopLevel.vhdl|21
 V=0*845965
 
 [~A]
 ./../../ALU.vhdl~ALU=0*0*431
-./../../ALU.vhdl~Arch_ALUALU=0*986304*987214
+./../../ALU.vhdl~Arch_ALUALU=0*1066725*1067635
 ./../../Adder.vhdl~Adder=0*5284*5588
-./../../Adder.vhdl~Arch_AdderAdder=0*981438*981591
-./../../ControlUnit.vhdl~Arch_ControlUnitControlUnit=0*984053*985549
+./../../Adder.vhdl~Arch_AdderAdder=0*1061859*1062012
+./../../ControlUnit.vhdl~Arch_ControlUnitControlUnit=0*1064474*1065970
 ./../../ControlUnit.vhdl~ControlUnit=0*66022*66499
 ./../../DataMemory.vhdl~DataMemory=0*23209*23583
-./../../DataMemory.vhdl~archDataMemory=0*982849*983298
-./../../DataPath.vhdl~Arch_DataPathDataPath=0*995688*997421
+./../../DataMemory.vhdl~archDataMemory=0*1063270*1063719
+./../../DataPath.vhdl~Arch_DataPathDataPath=0*1081754*1083487
 ./../../DataPath.vhdl~DataPath=0*826761*827451
-./../../InstructionMemory.vhdl~Arch_InstructionMemoryInstructionMemory=0*1039790*1040348
+./../../InstructionMemory.vhdl~Arch_InstructionMemoryInstructionMemory=0*1072680*1073238
 ./../../InstructionMemory.vhdl~InstructionMemory=0*28211*28565
 ./../../MIPS.vhdl~Arch_MIPSMIPS=0*648097*648986
 ./../../MIPS.vhdl~MIPS=0*646231*646602
-./../../Multiplexer.vhdl~Arch_MultiplexerMultiplexer=0*987389*987596
+./../../Multiplexer.vhdl~Arch_MultiplexerMultiplexer=0*1073455*1073662
 ./../../Multiplexer.vhdl~Multiplexer=0*324264*324666
 ./../../Packages.vhdl~packages=0*782402*785464
-./../../ProgramCounter.vhdl~Arch_ProgramCounterProgramCounter=0*992076*992365
+./../../ProgramCounter.vhdl~Arch_ProgramCounterProgramCounter=0*1078142*1078431
 ./../../ProgramCounter.vhdl~ProgramCounter=0*462527*462859
-./../../RegisterFiles.vhdl~Arch_RegISterFilesRegISterFiles=0*989845*991021
+./../../RegisterFiles.vhdl~Arch_RegISterFilesRegISterFiles=0*1075911*1077087
 ./../../RegisterFiles.vhdl~RegISterFiles=0*15435*16009
-./../../ShiftLeft2.vhdl~Arch_ShiftLeft2ShiftLeft2=0*991655*991874
+./../../ShiftLeft2.vhdl~Arch_ShiftLeft2ShiftLeft2=0*1077721*1077940
 ./../../ShiftLeft2.vhdl~ShiftLeft2=0*12983*13267
 ./../../TestBench.vhdl~testbench=0*846884*847086
-./../../TestBench.vhdl~testtestbench=0*1002698*1003419
-./../../TopLevel.vhdl~Arch_TopLevelTopLevel=0*1001022*1001574
+./../../TestBench.vhdl~testtestbench=0*1088764*1089485
+./../../TopLevel.vhdl~Arch_TopLevelTopLevel=0*1087088*1087640
 ./../../TopLevel.vhdl~TopLevel=0*843097*843415
-./../../mips.vhdl~Arch_MIPSMIPS=0*998937*999814
+./../../mips.vhdl~Arch_MIPSMIPS=0*1085003*1085880
 ./../../mips.vhdl~MIPS=0*837748*838119
-./../../sign_extender.vhdl~Arch_ExtenderSignExtender=0*991220*991458
+./../../sign_extender.vhdl~Arch_ExtenderSignExtender=0*1077286*1077524
 ./../../sign_extender.vhdl~SignExtender=0*20759*21024
-./compile/BlockDiagram.vhd~BlockDiagram=0*925528*925780
-./compile/BlockDiagram.vhd~BlockDiagramBlockDiagram=0*1016270*1019672
-ModifyID=2221
+./compile/BlockDiagram.vhd~BlockDiagram=0*1089561*1089783
+./compile/BlockDiagram.vhd~BlockDiagramBlockDiagram=0*1102635*1106030
+ModifyID=2330
 Version=73
 
 [~MFT]
-0=2317|0Design0.mgf|1040348|921884
-1=610|1Design0.mgf|1361085|1232315
+0=2429|0Design0.mgf|1106497|988382
+1=642|1Design0.mgf|1452282|1310354
 2=27|2Design0.mgf|62274|53109
-3=577|3Design0.mgf|485344|462534
+3=609|3Design0.mgf|515791|490254
 
 [~U]
 adder=Adder 11|0*5974|0*6165
 alu=ALU 11|0*2132|0*2408
-blockdiagram=11|0*942127|0*942305
+blockdiagram=11|0*1106121|0*1106272
 controlunit=ControlUnit 11|0*66575|0*67008|0x3
 datamemory=DataMemory 11|0*26074|0*26340|0x3
 datapath=11|0*832559|0*833144|0x3

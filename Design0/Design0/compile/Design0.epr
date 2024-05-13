@@ -1,2 +1,17 @@
-"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\InstructionMemory.vhdl" Design0 1 0 0
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Packages.vhdl" Design0 1 0 1146377052
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Adder.vhdl" Design0 1 0 0
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\DataMemory.vhdl" Design0 1 0 1162435653
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\ControlUnit.vhdl" Design0 1 0 0
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\ALU.vhdl" Design0 1 0 1814981750
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\InstructionMemory.vhdl" Design0 1 0 1162435653
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Multiplexer.vhdl" Design0 1 0 0
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\RegisterFiles.vhdl" Design0 1 0 0
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\sign_extender.vhdl" Design0 1 0 0
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\ShiftLeft2.vhdl" Design0 1 0 1814981750
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\ProgramCounter.vhdl" Design0 1 0 0
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\DataPath.vhdl" Design0 2 0 0
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\mips.vhdl" Design0 2 0 0
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\TopLevel.vhdl" Design0 1 0 0
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\TestBench.vhdl" Design0 1 0 0
+"d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Design0\Design0\compile\BlockDiagram.vhd" Design0 1 0 0
 . . 0 0 0

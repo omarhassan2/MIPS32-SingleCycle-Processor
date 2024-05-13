@@ -41,7 +41,7 @@ FILE HEADER
 --
 ##########
 GLOBAL CONNECTOR
-Global
+Global0
 ##########
 GND DEFAULT TYPE
 STD_LOGIC

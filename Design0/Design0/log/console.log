@@ -1,50 +1,3 @@
-asim testbench test
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# ELAB2: Elaboration final pass complete - time: 0.2 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 8941 kB (elbread=1071 elab2=6279 kernel=1591 sdf=0)
-# 2:58 AM, Wednesday, May 8, 2024
-# Simulation has been initialized
-# Selected Top-Level: testbench (test)
-run 5 ns
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /TopLevel/Processor/Data/pcplus4_Adder,  Process: line__38.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /TopLevel/Processor/Data/pcbranch_Adder,  Process: line__38.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /TopLevel/Processor/Data/ALU,  Process: line__81.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /TopLevel/Processor/Data/pcbranch_Adder,  Process: line__38.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /TopLevel/Processor/Data/ALU,  Process: line__45.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /TopLevel/Processor/Data/pcbranch_Adder,  Process: line__38.
-# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 3,  Instance: /TopLevel/Processor/Data/ALU,  Process: line__81.
-# KERNEL: stopped at time: 5 ns
-run 5 ns
-# KERNEL: stopped at time: 10 ns
-run 5 ns
-# KERNEL: stopped at time: 15 ns
-run 5 ns
-# KERNEL: stopped at time: 20 ns
-run 5 ns
-# KERNEL: stopped at time: 25 ns
-run 5 ns
-# RUNTIME: Fatal Error: RUNTIME_0047 InstructionMemory.vhdl (51): Index 4 out of range (0 to 2).
-# KERNEL: Time: 30 ns,  Iteration: 2,  Instance: /TopLevel/InstructionMemory,  Process: line__51.
-# KERNEL: stopped at time: 30 ns
-# Fatal error occurred during simulation.
-# Simulation has been stopped
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 asim datamemory arch
@@ -61,79 +14,41 @@ asim datamemory arch
 # ELAB2: Elaboration final pass complete - time: 0.3 [s].
 # KERNEL: Kernel process initialization done.
 # Allocation: Simulator allocated 8814 kB (elbread=1070 elab2=6184 kernel=1560 sdf=0)
-# 3:02 AM, Wednesday, May 8, 2024
+# 1:05 AM, Friday, May 10, 2024
 # Simulation has been initialized
 # Selected Top-Level: datamemory (arch)
-# Signal DataAddress not found in design
-# Signal reset not found in design
-# Signal MemoryReadWriteEnable not found in design
-run
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
 run 5 ns
 # KERNEL: stopped at time: 5 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-run 5 ns
-# KERNEL: stopped at time: 10 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-run 5 ns
-# KERNEL: stopped at time: 15 ns
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
 # Simulation has been stopped
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
-asim instructionmemory arch_instructionmemory
+asim blockdiagram blockdiagram
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 # asim: Stack memory: 32MB
 # asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# ELAB2: Elaboration final pass complete - time: 0.2 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2420 kB (elbread=1070 elab2=302 kernel=1048 sdf=0)
-# 3:06 AM, Wednesday, May 8, 2024
-# Simulation has been initialized
-# Selected Top-Level: instructionmemory (arch_instructionmemory)
-# Signal WriteData not found in design
-# Signal DataAddress not found in design
-# Signal clk not found in design
-# Signal reset not found in design
-# Signal MemoryReadWriteEnable not found in design
-# Signal DataMem not found in design
-# Signal clk not found in design
-# Signal WriteEnable not found in design
-# Signal WriteData not found in design
-# Signal ReadData not found in design
-run 5 ns
-# KERNEL: stopped at time: 5 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-run 5 ns
-# KERNEL: stopped at time: 10 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-run 5 ns
-# KERNEL: stopped at time: 15 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-run 5 ns
-# KERNEL: stopped at time: 20 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-run 5 ns
-# KERNEL: stopped at time: 25 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-run 5 ns
-# KERNEL: stopped at time: 30 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-# Simulation has been stopped
+acom $DSN/../../DataPath.vhdl $DSN/src/BlockDiagram.bde
+# Compile...
+# DRC: Checking file 'd:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Design0\Design0\src\BlockDiagram.bde'.
+# DRC: Warning: BlockDiagram.bde - 0 error(s), 1 warning(s)
+# DRC: The results have been written to the log file. Double click on this line to view the log.
+# Generating d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Design0\Design0\compile\BlockDiagram.vhd from d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Design0\Design0\src\BlockDiagram.bde ...
+# Generation successful
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\DataPath.vhdl
+# Compile Entity "DataPath"
+# Entity `DataPath' has been skipped - no difference detected.
+# Compile Architecture "Arch_DataPath" of Entity "DataPath"
+# Warning: COMP96_0413: DataPath.vhdl : (112, 3): Actual of mode "buffer" can not be assigned to formal "ReadDataTwo" of mode "out"
+# Warning: COMP96_0413: DataPath.vhdl : (126, 3): Actual of mode "buffer" can not be assigned to formal "ALU_Output" of mode "out"
+# Warning: COMP96_0413: DataPath.vhdl : (127, 3): Actual of mode "buffer" can not be assigned to formal "Zero_Flag" of mode "out"
+# File: .\BlockDiagram.vhd
+# Compile Entity "BlockDiagram"
+# Entity `BlockDiagram' has been skipped - no difference detected.
+# Compile Architecture "BlockDiagram" of Entity "BlockDiagram"
+# Compile success 0 Errors 3 Warnings  Analysis time :  0.3 [s]
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
-asim programcounter arch_programcounter
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
 # KERNEL: Main thread initiated.
 # KERNEL: Kernel process initialization phase.
 # KERNEL: Time resolution set to 1ps.
@@ -142,43 +57,106 @@ asim programcounter arch_programcounter
 # ELAB2: Create instances complete.
 # ELAB2: Elaboration final pass complete - time: 0.3 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2417 kB (elbread=1070 elab2=299 kernel=1048 sdf=0)
-# 3:08 AM, Wednesday, May 8, 2024
+# Allocation: Simulator allocated 8940 kB (elbread=1071 elab2=6277 kernel=1592 sdf=0)
+# 1:06 AM, Friday, May 10, 2024
 # Simulation has been initialized
-# Selected Top-Level: programcounter (arch_programcounter)
-run 5 ns
-# KERNEL: stopped at time: 5 ns
+# Selected Top-Level: blockdiagram (blockdiagram)
+run
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /U2/pcplus4_Adder,  Process: line__38.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /U2/pcbranch_Adder,  Process: line__38.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /U2/ALU,  Process: line__81.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /U2/pcbranch_Adder,  Process: line__38.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /U2/ALU,  Process: line__45.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /U2/pcbranch_Adder,  Process: line__38.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 3,  Instance: /U2/pcbranch_Adder,  Process: line__38.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 3,  Instance: /U2/ALU,  Process: line__81.
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
-run 5 ns
-# KERNEL: stopped at time: 10 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-run 5 ns
-# KERNEL: stopped at time: 15 ns
-# KERNEL: Simulation has finished. There are no more test vectors to simulate.
-run 5 ns
-# KERNEL: stopped at time: 20 ns
-run 5 ns
-# KERNEL: stopped at time: 25 ns
-run 5 ns
-# KERNEL: stopped at time: 30 ns
-run 5 ns
-# KERNEL: stopped at time: 35 ns
-run 5 ns
-# KERNEL: stopped at time: 40 ns
-run 5 ns
-# KERNEL: stopped at time: 45 ns
-run 5 ns
-# KERNEL: stopped at time: 50 ns
-run 5 ns
-# KERNEL: stopped at time: 55 ns
-run 5 ns
-# KERNEL: stopped at time: 60 ns
-run 5 ns
-# KERNEL: stopped at time: 65 ns
 endsim
 # All when statements cleared.
 # Simulation has been stopped
-asim programcounter arch_programcounter
+acom $DSN/../../packages.vhdl $DSN/../../adder.vhdl $DSN/../../datamemory.vhdl $DSN/../../controlunit.vhdl $DSN/../../alu.vhdl $DSN/../../instructionmemory.vhdl $DSN/../../multiplexer.vhdl $DSN/../../registerfiles.vhdl $DSN/../../sign_extender.vhdl $DSN/../../shiftleft2.vhdl $DSN/../../programcounter.vhdl $DSN/../../datapath.vhdl $DSN/../../mips.vhdl $DSN/../../toplevel.vhdl $DSN/../../testbench.vhdl $DSN/src/blockdiagram.bde
+# Compile...
+# DRC: Checking file 'd:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Design0\Design0\src\BlockDiagram.bde'.
+# DRC: Warning: BlockDiagram.bde - 0 error(s), 1 warning(s)
+# DRC: The results have been written to the log file. Double click on this line to view the log.
+# Generating d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Design0\Design0\compile\BlockDiagram.vhd from d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Design0\Design0\src\BlockDiagram.bde ...
+# Generation successful
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Packages.vhdl
+# Compile Package "packages"
+# Package `packages' has been skipped - no difference detected.
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Adder.vhdl
+# Compile Entity "Adder"
+# Entity `Adder' has been skipped - no difference detected.
+# Compile Architecture "Arch_Adder" of Entity "Adder"
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\DataMemory.vhdl
+# Compile Entity "DataMemory"
+# Entity `DataMemory' has been skipped - no difference detected.
+# Compile Architecture "arch" of Entity "DataMemory"
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\ControlUnit.vhdl
+# Compile Entity "ControlUnit"
+# Entity `ControlUnit' has been skipped - no difference detected.
+# Compile Architecture "Arch_ControlUnit" of Entity "ControlUnit"
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\ALU.vhdl
+# Compile Entity "ALU"
+# Entity `ALU' has been skipped - no difference detected.
+# Compile Architecture "Arch_ALU" of Entity "ALU"
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\InstructionMemory.vhdl
+# Compile Entity "InstructionMemory"
+# Entity `InstructionMemory' has been skipped - no difference detected.
+# Compile Architecture "Arch_InstructionMemory" of Entity "InstructionMemory"
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Multiplexer.vhdl
+# Compile Entity "Multiplexer"
+# Entity `Multiplexer' has been skipped - no difference detected.
+# Compile Architecture "Arch_Multiplexer" of Entity "Multiplexer"
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\RegisterFiles.vhdl
+# Compile Entity "RegISterFiles"
+# Entity `RegISterFiles' has been skipped - no difference detected.
+# Compile Architecture "Arch_RegISterFiles" of Entity "RegISterFiles"
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\sign_extender.vhdl
+# Compile Entity "SignExtender"
+# Entity `SignExtender' has been skipped - no difference detected.
+# Compile Architecture "Arch_Extender" of Entity "SignExtender"
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\ShiftLeft2.vhdl
+# Compile Entity "ShiftLeft2"
+# Entity `ShiftLeft2' has been skipped - no difference detected.
+# Compile Architecture "Arch_ShiftLeft2" of Entity "ShiftLeft2"
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\ProgramCounter.vhdl
+# Compile Entity "ProgramCounter"
+# Entity `ProgramCounter' has been skipped - no difference detected.
+# Compile Architecture "Arch_ProgramCounter" of Entity "ProgramCounter"
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\DataPath.vhdl
+# Compile Entity "DataPath"
+# Entity `DataPath' has been skipped - no difference detected.
+# Compile Architecture "Arch_DataPath" of Entity "DataPath"
+# Warning: COMP96_0413: DataPath.vhdl : (112, 3): Actual of mode "buffer" can not be assigned to formal "ReadDataTwo" of mode "out"
+# Warning: COMP96_0413: DataPath.vhdl : (126, 3): Actual of mode "buffer" can not be assigned to formal "ALU_Output" of mode "out"
+# Warning: COMP96_0413: DataPath.vhdl : (127, 3): Actual of mode "buffer" can not be assigned to formal "Zero_Flag" of mode "out"
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\mips.vhdl
+# Compile Entity "MIPS"
+# Entity `MIPS' has been skipped - no difference detected.
+# Compile Architecture "Arch_MIPS" of Entity "MIPS"
+# Warning: COMP96_0413: mips.vhdl : (47, 17): Actual of mode "buffer" can not be assigned to formal "MemoryReadWriteEnable" of mode "out"
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\TopLevel.vhdl
+# Compile Entity "TopLevel"
+# Entity `TopLevel' has been skipped - no difference detected.
+# Compile Architecture "Arch_TopLevel" of Entity "TopLevel"
+# File: d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\TestBench.vhdl
+# Compile Entity "testbench"
+# Entity `testbench' has been skipped - no difference detected.
+# Compile Architecture "test" of Entity "testbench"
+# File: .\BlockDiagram.vhd
+# Compile Entity "BlockDiagram"
+# Compile Architecture "BlockDiagram" of Entity "BlockDiagram"
+# Compile success 0 Errors 4 Warnings  Analysis time :  2.0 [s]
+asim blockdiagram blockdiagram
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 # asim: Stack memory: 32MB
@@ -191,14 +169,37 @@ asim programcounter arch_programcounter
 # ELAB2: Create instances complete.
 # ELAB2: Elaboration final pass complete - time: 0.3 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2417 kB (elbread=1070 elab2=299 kernel=1048 sdf=0)
-# 3:10 AM, Wednesday, May 8, 2024
+# Allocation: Simulator allocated 8940 kB (elbread=1071 elab2=6277 kernel=1592 sdf=0)
+# 1:14 AM, Friday, May 10, 2024
 # Simulation has been initialized
-# Selected Top-Level: programcounter (arch_programcounter)
+# Selected Top-Level: blockdiagram (blockdiagram)
+run
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /U2/pcplus4_Adder,  Process: line__38.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /U2/pcbranch_Adder,  Process: line__38.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /U2/ALU,  Process: line__81.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /U2/pcbranch_Adder,  Process: line__38.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /U2/ALU,  Process: line__45.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /U2/pcbranch_Adder,  Process: line__38.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 3,  Instance: /U2/pcbranch_Adder,  Process: line__38.
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 0 ps,  Iteration: 3,  Instance: /U2/ALU,  Process: line__81.
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run
+# KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# KERNEL: Time: 2500 ps,  Iteration: 1,  Instance: /U2/pcplus4_Adder,  Process: line__38.
+run @31967167.5ns
+endsim
+# All when statements cleared.
+# KERNEL: stopped at delta: 0 at time 59030175 ns.
 # Simulation has been stopped
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-asim testbench test
+asim blockdiagram blockdiagram
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 # asim: Stack memory: 32MB
@@ -211,31 +212,29 @@ asim testbench test
 # ELAB2: Create instances complete.
 # ELAB2: Elaboration final pass complete - time: 0.3 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 8941 kB (elbread=1071 elab2=6279 kernel=1591 sdf=0)
-# 3:11 AM, Wednesday, May 8, 2024
+# Allocation: Simulator allocated 8940 kB (elbread=1071 elab2=6277 kernel=1592 sdf=0)
+# 1:15 AM, Friday, May 10, 2024
 # Simulation has been initialized
-# Selected Top-Level: testbench (test)
-# Signal input not found in design
-# Signal output not found in design
+# Selected Top-Level: blockdiagram (blockdiagram)
 run 5 ns
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /TopLevel/Processor/Data/pcplus4_Adder,  Process: line__38.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /U2/pcplus4_Adder,  Process: line__38.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /TopLevel/Processor/Data/pcbranch_Adder,  Process: line__38.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /U2/pcbranch_Adder,  Process: line__38.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /TopLevel/Processor/Data/ALU,  Process: line__81.
+# KERNEL: Time: 0 ps,  Iteration: 0,  Instance: /U2/ALU,  Process: line__81.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /TopLevel/Processor/Data/pcbranch_Adder,  Process: line__38.
+# KERNEL: Time: 0 ps,  Iteration: 1,  Instance: /U2/pcbranch_Adder,  Process: line__38.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /TopLevel/Processor/Data/ALU,  Process: line__45.
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /U2/ALU,  Process: line__45.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /TopLevel/Processor/Data/pcbranch_Adder,  Process: line__38.
+# KERNEL: Time: 0 ps,  Iteration: 2,  Instance: /U2/pcbranch_Adder,  Process: line__38.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 3,  Instance: /TopLevel/Processor/Data/pcbranch_Adder,  Process: line__38.
+# KERNEL: Time: 0 ps,  Iteration: 3,  Instance: /U2/pcbranch_Adder,  Process: line__38.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 0 ps,  Iteration: 3,  Instance: /TopLevel/Processor/Data/ALU,  Process: line__81.
+# KERNEL: Time: 0 ps,  Iteration: 3,  Instance: /U2/ALU,  Process: line__81.
 # KERNEL: WARNING: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-# KERNEL: Time: 2500 ps,  Iteration: 1,  Instance: /TopLevel/Processor/Data/pcplus4_Adder,  Process: line__38.
+# KERNEL: Time: 2500 ps,  Iteration: 1,  Instance: /U2/pcplus4_Adder,  Process: line__38.
 # KERNEL: stopped at time: 5 ns
 run 5 ns
 # KERNEL: stopped at time: 10 ns
@@ -243,72 +242,8 @@ run 5 ns
 # KERNEL: stopped at time: 15 ns
 run 5 ns
 # KERNEL: stopped at time: 20 ns
-restart
+run
+endsim
 # All when statements cleared.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 8941 kB (elbread=1071 elab2=6279 kernel=1591 sdf=0)
-# 3:12 AM, Wednesday, May 8, 2024
-# Simulation has been initialized
-# Selected Top-Level: testbench (test)
-# Signal input not found in design
-# Signal output not found in design
-# Simulation has been stopped
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-asim datamemory arch
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# ELAB2: Elaboration final pass complete - time: 0.3 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 8814 kB (elbread=1070 elab2=6184 kernel=1560 sdf=0)
-# 3:12 AM, Wednesday, May 8, 2024
-# Simulation has been initialized
-# Selected Top-Level: datamemory (arch)
-# Signal reset not found in design
-# Signal input not found in design
-# Signal output not found in design
-# Signal DataAddress not found in design
-# Signal reset not found in design
-# Signal MemoryReadWriteEnable not found in design
-run 5 ns
-# KERNEL: stopped at time: 5 ns
-restart
-# All when statements cleared.
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 8814 kB (elbread=1070 elab2=6184 kernel=1560 sdf=0)
-# 3:13 AM, Wednesday, May 8, 2024
-# Simulation has been initialized
-# Selected Top-Level: datamemory (arch)
-# Signal reset not found in design
-# Signal input not found in design
-# Signal output not found in design
-# Signal DataAddress not found in design
-# Signal reset not found in design
-# Signal MemoryReadWriteEnable not found in design
+# KERNEL: stopped at time: 41435675 ns
 # Simulation has been stopped

@@ -1,4 +1,4 @@
-2221
+2330
 ~E 1 "./../../mips.vhdl" 20 mips
 ~A 1 "./../../mips.vhdl" 33 arch_mips
 ~E 1 "./../../ControlUnit.vhdl" 22 controlunit
@@ -8,7 +8,7 @@
 ~E 1 "./../../Adder.vhdl" 25 adder
 ~A 1 "./../../Adder.vhdl" 36 arch_adder
 ~E 1 "./compile/BlockDiagram.vhd" 25 blockdiagram
-~A 1 "./compile/BlockDiagram.vhd" 33 blockdiagram
+~A 1 "./compile/BlockDiagram.vhd" 32 blockdiagram
 ~E 1 "./../../DataPath.vhdl" 23 datapath
 ~A 1 "./../../DataPath.vhdl" 46 arch_datapath
 ~E 1 "./../../DataMemory.vhdl" 26 datamemory

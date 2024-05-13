@@ -8,7 +8,7 @@
 ---------------------------------------------------------------------------------------------------
 --
 -- File        : d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Design0\Design0\compile\BlockDiagram.vhd
--- Generated   : Wed May  8 02:45:39 2024
+-- Generated   : Fri May 10 01:13:55 2024
 -- From        : d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Design0\Design0\src\BlockDiagram.bde
 -- By          : Bde2Vhdl ver. 2.6
 --
@@ -24,9 +24,8 @@ use IEEE.std_logic_1164.all;
 
 entity BlockDiagram is
   port(
-       Input0 : in STD_LOGIC;
-       Input1 : in STD_LOGIC;
-       Input2 : in STD_LOGIC
+       clk : in STD_LOGIC;
+       reset : in STD_LOGIC
   );
 end BlockDiagram;
 
@@ -144,8 +143,8 @@ U2 : datapath
        RegisteryWriteEnable => NET452,
        WriteData => BUS1752,
        Zero_Flag => NET230,
-       clk => Input0,
-       reset => Input1
+       clk => clk,
+       reset => reset
   );
 
 NET272 <= NET230 and NET276;
@@ -162,7 +161,7 @@ U5 : DataMemory
        ReadData => BUS2106,
        WriteData => BUS1752,
        WriteEnable => NET1895,
-       clk => Input2
+       clk => clk
   );
 
 

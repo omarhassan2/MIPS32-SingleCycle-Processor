@@ -1,18 +1,30 @@
-elbread.dll ver. 1.0.5.365 Wed May 08 03:13:18 2024
+elbread.dll ver. 1.0.5.365 Fri May 10 01:15:40 2024
 
 
-------------------------------------
-Entity      | Architecture | Library
-------------------------------------
-datamemory  | arch         | Design0
-------------------------------------
+-----------------------------------------------------
+Entity             | Architecture           | Library
+-----------------------------------------------------
+blockdiagram       | blockdiagram           | Design0
+controlunit        | arch_controlunit       | design0
+datapath           | arch_datapath          | design0
+instructionmemory  | arch_instructionmemory | design0
+datamemory         | arch                   | design0
+signextender       | arch_extender          | design0
+shiftleft2         | arch_shiftleft2        | design0
+adder              | arch_adder             | design0
+multiplexer        | arch_multiplexer       | design0
+programcounter     | arch_programcounter    | design0
+registerfiles      | arch_registerfiles     | design0
+alu                | arch_alu               | design0
+-----------------------------------------------------
 
 -----------------------------
 Package             | Library
 -----------------------------
 standard            | std
 std_logic_1164      | ieee
-numeric_std         | ieee
 std_logic_arith     | ieee
+numeric_std         | ieee
 std_logic_unsigned  | ieee
+packages            | design0
 -----------------------------
