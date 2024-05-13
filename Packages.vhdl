@@ -118,7 +118,7 @@ COMPONENT ProgramCounter IS
 	PORT(
         clk,reset : IN std_logic;
 		input  : IN  std_logic_vector(31 DOWNTO 0);
-        output : BUFFER std_logic_vector(31 DOWNTO 0)
+        output : OUT std_logic_vector(31 DOWNTO 0)
 	);
 END COMPONENT; 
 -- ==========================================
@@ -150,10 +150,10 @@ COMPONENT DataPath IS
 		ReadData, Instruction: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 		-- Ouputs
-		Zero_Flag	: BUFFER STD_LOGIC;
-		PC			: BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-		ALU_Output	: BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-		WriteData	: BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0)	
+		Zero_Flag	: OUT STD_LOGIC;
+		PC			: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		ALU_Output	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		WriteData	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0)	
 	);
 END COMPONENT; 
 -- ==========================================
@@ -162,9 +162,9 @@ END COMPONENT;
 -- ================== MIPS ==================
 COMPONENT MIPS IS
     PORT(
-        ALU_Output, WriteData, PC : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+        ALU_Output, WriteData, PC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
         Instruction, ReadData : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-        MemoryReadWriteEnable : BUFFER STD_LOGIC;
+        MemoryReadWriteEnable : OUT STD_LOGIC;
         clk, reset : IN STD_LOGIC
     );
 END COMPONENT; 
@@ -175,8 +175,8 @@ END COMPONENT;
 COMPONENT TopLevel IS
     PORT(
         clk, reset : IN STD_LOGIC;
-        WriteData, ALU_Output : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-        MemoryReadWriteEnable : BUFFER STD_LOGIC
+        WriteData, ALU_Output, PC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+        MemoryReadWriteEnable : OUT STD_LOGIC
     );
 END COMPONENT; 
 -- ==========================================

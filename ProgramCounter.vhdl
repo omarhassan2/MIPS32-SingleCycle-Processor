@@ -24,7 +24,7 @@ ENTITY ProgramCounter IS
 	PORT(
         clk,reset : IN std_logic;
 		input  : IN  std_logic_vector(31 DOWNTO 0);
-        output : BUFFER std_logic_vector(31 DOWNTO 0)
+        output : OUT std_logic_vector(31 DOWNTO 0)
 	);
 END ProgramCounter; 
 -- ==========================================
