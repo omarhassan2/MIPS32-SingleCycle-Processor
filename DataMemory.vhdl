@@ -51,7 +51,6 @@ BEGIN
 			END IF;	 
 		END IF;			
 	END PROCESS; 
-	
-	--ReadData <= Data(TO_INTEGER(UNSIGNED(Address))) WHEN WriteEnable = '0' AND TO_INTEGER(UNSIGNED(Address)) < 1023 ELSE X"00000000" ;
-END arch;
+
+	END arch;
 -- =============================================		

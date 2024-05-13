@@ -68,11 +68,9 @@ ARCHITECTURE Arch_MIPS OF MIPS IS
                 PC,
                	ALU_Output,
                 WriteData
-            );
- 			--ALU_Output <= ALU_Output_Signal;
-            PCSource <= Zero_Flag AND Branch;	 
-			--PC <= PC_Signal;
-			--WriteData <= WriteData_Signal;
+            );	
+			PCSource <= Zero_Flag AND Branch;
+ 
 
 END Arch_MIPS;
 -- ==============================================
