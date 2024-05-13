@@ -16,7 +16,7 @@ ThIS repository contaINs an implementation OF a sINgle cycle PROCESSor that adhe
 
 ## ARCHITECTURE
 
-![ARCHITECTURE](/MIPS32-SingleCycle-Processor.jpg)
+![ARCHITECTURE](/MIPS.png)
 
 ## GettINg Started
 
