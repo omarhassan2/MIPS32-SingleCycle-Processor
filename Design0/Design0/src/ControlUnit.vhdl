@@ -67,7 +67,7 @@ ARCHITECTURE Arch_ControlUnit OF ControlUnit IS
                     WHEN "000100" => -- Branch if Equel (BEQ), ALU (SUBTRACT).
                         OutputControl <= "0001000" & "0110";
                     WHEN "000010" => -- Jump (J), ALU (DON'T CARE).
-						OutputControl <= "0001001" & "0000";
+						OutputControl <= "0000001" & "0000";
 					WHEN OTHERS => -- Add
                     	OutputControl <= "1100000" & "0010";
                 END CASE;
