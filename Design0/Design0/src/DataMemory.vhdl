@@ -3,12 +3,12 @@
 -- @Author: Mohamed Gehad (ENGMGehad@gmail.com)
 -- 
 -- @Description: 
---		- DataMemory IS a module that represents a memory unit. 
--- 		- It stores data IN a fixed-size array OF regISters. 
--- 		- The module ALLows readINg and writINg data based on the provided address. 
--- 		- It operates synchronously with the clock SIGNAL.
+--		- DataMemory is a module that represents a memory unit. 
+-- 		- It stores data in a fixed-size array of registers. 
+-- 		- The module allows reading and writing data based on the provided address. 
+-- 		- It operates synchronously with the clock signal.
 --
--- @RevISion HIStory: 4-5-2024
+-- @Revision History: 4-5-2024
 -- =====================================================================
 
 
@@ -25,32 +25,35 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 -- =========== Entities Section =============
 ENTITY DataMemory IS
 	PORT (
-		clk,WriteEnable: IN std_logic;
-		Address,WriteData: IN std_logic_vector(31 DOWNTO 0);
-		ReadData: OUT std_logic_vector(31 DOWNTO 0)
+		clk,WriteEnable		: IN STD_LOGIC;
+		Address,WriteData	: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		ReadData			: OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END DataMemory;
 -- ==========================================
 
 
 
--- =========== ARCHITECTUREs Section ===========
-ARCHITECTURE arch OF DataMemory IS
-	type memory IS array (0 to 1023) OF std_logic_vector(31 DOWNTO 0);
-	SIGNAL Data: memory:=(
+-- =========== Architectures Section ===========
+ARCHITECTURE Arch_DataMemory OF DataMemory IS
+	TYPE Memory IS ARRAY (0 to 1023) OF STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL Data: Memory:=( 
+		X"00000008",
 		OTHERS => X"00000000"
 	);
 BEGIN
 	PROCESS(clk,Address)
 	BEGIN
-		IF (falling_edge(clk)) THEN
+		IF (FALLING_EDGE(clk)) THEN
 			IF (WriteEnable = '1') THEN 
 				Data(TO_INTEGER(UNSIGNED(Address))) <= WriteData;
-			ELSE
-				ReadData <= Data(TO_INTEGER(UNSIGNED(Address)));	
+			ELSE   
+				IF(Address < 1023) THEN
+					ReadData <= Data(TO_INTEGER(UNSIGNED(Address)));
+				END IF;	
 			END IF;	 
 		END IF;			
 	END PROCESS; 
 
-	END arch;
+	END Arch_DataMemory;
 -- =============================================		

@@ -22,9 +22,9 @@ USE IEEE.NUMERIC_STD.ALL;
 -- =========== Entities Section =============
 ENTITY ProgramCounter IS
 	PORT(
-        clk,reset : IN std_logic;
-		input  : IN  std_logic_vector(31 DOWNTO 0);
-        output : OUT std_logic_vector(31 DOWNTO 0)
+        clk,reset   : IN STD_LOGIC;
+		Input       : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+        Output      : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END ProgramCounter; 
 -- ==========================================
@@ -37,9 +37,9 @@ BEGIN
 	PROCESS (clk) 
     BEGIN
         IF(reset = '1') THEN
-            output <= (OTHERS => '0');
-        ELSIF rising_edge(clk) THEN
-            output <= input;
+            Output <= (OTHERS => '0');
+        ELSIF (RISING_EDGE(clk)) THEN
+            Output <= Input;
         END IF;
     END PROCESS;
 END Arch_ProgramCounter;

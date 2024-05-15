@@ -3,7 +3,7 @@
 -- @Author: Omar Hassan (engomar625@gmail.com)
 -- 
 -- @Description: 
---		- This file contains all COMPONENTs in this workspcae.
+--		- This file contains all COMPONENTs IN this workspcae.
 --      - Use this line of code to use it : ' USE WORK.Packages.ALL; '
 --
 -- @Revision History: 4-5-2024
@@ -18,114 +18,104 @@ USE IEEE.NUMERIC_STD.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 -- =========================================
 
--- ====================== Package Section ======================
+
 PACKAGE packages IS	 
 	
--- 1	
--- ====== ShiftLeft2 ======
-COMPONENT ShiftLeft2 IS
-    PORT(
-        input : in std_logic_vector(31 downto 0);
-        output: OUT std_logic_vector(31 downto 0)
-    );
-END COMPONENT;
--- ========================
 
--- 2
--- ====== SignExtender ======
+-- =========== SignExtender ==========
 COMPONENT SignExtender IS
     PORT(
-        input  : IN   std_logic_vector(15 DOWNTO 0); 
-		output : OUT  std_logic_vector(31 DOWNTO 0)
+        Input  : IN   STD_LOGIC_VECTOR(15 DOWNTO 0); 
+		Output : OUT  STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
 END COMPONENT;
--- ========================
+-- ====================================
 
--- 3
--- ====== Multiplexer ======
+
+-- =========== Multiplexer ============
 COMPONENT Multiplexer IS
-    GENERIC (Bits: integer);
+    GENERIC (Bits: INTEGER);
     PORT(
-        Selector: IN std_logic;
-        IN0,IN1: IN std_logic_vector(Bits - 1 DOWNTO 0);
-        OUTput: OUT std_logic_vector(Bits - 1 DOWNTO 0)
+        Selector    : IN STD_LOGIC;
+        IN0,IN1     : IN STD_LOGIC_VECTOR(Bits - 1 DOWNTO 0);
+        Output      : OUT STD_LOGIC_VECTOR(Bits - 1 DOWNTO 0)
     );
 END COMPONENT;
--- ========================
+-- ====================================
 
--- 4
--- ====== Adder ======
+
+-- ============== Adder ===============
 COMPONENT Adder IS
     PORT(
-        IN0, IN1: IN  std_logic_vector(31 DOWNTO 0);
-        OUTput:   OUT std_logic_vector(31 DOWNTO 0)
+        IN0, IN1    : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+        Output      :   OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
 END COMPONENT;
--- ========================
+-- ====================================
 
--- 5
--- ====== DataMemory ======
+
+-- =========== DataMemory ============
 COMPONENT DataMemory IS
     PORT (
-        clk,WriteEnable: IN std_logic;
-        Address,WriteData: IN std_logic_vector(31 DOWNTO 0);
-        ReadData: OUT std_logic_vector(31 DOWNTO 0)
+        clk,WriteEnable     : IN STD_LOGIC;
+        Address,WriteData   : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+        ReadData            : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
 END COMPONENT;
--- ========================
+-- ====================================
 
--- 6
--- ====== InstructionMemory ======
+
+-- =========== InstructionMemory =============
 COMPONENT InstructionMemory IS
     PORT (
-       Address       : IN  std_logic_vector(31 DOWNTO 0);
-       INstruction   : OUT std_logic_vector(31 DOWNTO 0)
+       Address       : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+       INstruction   : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
--- ========================
+-- =========================================
 
--- 7
--- ====== ALU ======
+
+-- =================== ALU ==================
 COMPONENT ALU IS 
 	PORT(
-		ALU_Input_One : IN  std_logic_vector(31 DOWNTO 0); 
-		ALU_Input_Two : IN  std_logic_vector(31 DOWNTO 0); 
-		ALU_Control   : IN  std_logic_vector(3 DOWNTO 0);
-		ALU_Output    : OUT std_logic_vector(31 DOWNTO 0);
-		Zero_Flag     : OUT std_logic
+		ALU_Input_One : IN  STD_LOGIC_VECTOR(31 DOWNTO 0); 
+		ALU_Input_Two : IN  STD_LOGIC_VECTOR(31 DOWNTO 0); 
+		ALU_Control   : IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+		ALUOutput     : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		Zero_Flag     : OUT STD_LOGIC
 	);
 END COMPONENT;
--- ========================
+-- =========================================
 
--- 8
--- ====== RegISterFiles ======
-COMPONENT RegISterFiles IS
+
+-- =========== RegisterFiles ===============
+COMPONENT RegisterFiles IS
     PORT (
-        CLK: IN STD_LOGIC;
-        WriteEnable : IN STD_LOGIC; -- WE3 (Enable)
-        ReadRegISterOne : IN  STD_LOGIC_VECTOR(4 DOWNTO 0); -- A1
-        ReadRegISterTwo : IN  STD_LOGIC_VECTOR(4 DOWNTO 0); -- A2
-        WriteRegISter   : IN  STD_LOGIC_VECTOR(4 DOWNTO 0); -- A3
+        clk             : IN STD_LOGIC;
+        WriteEnable     : IN STD_LOGIC;                      -- WE3 (Enable)
+        ReadRegisterOne : IN  STD_LOGIC_VECTOR(4 DOWNTO 0);  -- A1
+        ReadRegisterTwo : IN  STD_LOGIC_VECTOR(4 DOWNTO 0);  -- A2
+        WriteRegister   : IN  STD_LOGIC_VECTOR(4 DOWNTO 0);  -- A3
         WriteData       : IN  STD_LOGIC_VECTOR(31 DOWNTO 0); -- WriteData
         ReadDataOne     : OUT STD_LOGIC_VECTOR(31 DOWNTO 0); -- RD1
         ReadDataTwo     : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)  -- RD2
     );
 END COMPONENT;
--- ========================
+-- =========================================
 
--- 9
--- ====== ProgramCounter ======
+
+-- ============ ProgramCounter ==============
 COMPONENT ProgramCounter IS
 	PORT(
-        clk,reset : IN std_logic;
-		input  : IN  std_logic_vector(31 DOWNTO 0);
-        output : OUT std_logic_vector(31 DOWNTO 0)
+        clk, reset   : IN STD_LOGIC;
+		Input        : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+        Output       : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT; 
--- ========================
+-- ==========================================
 
--- 10
--- ====== ControlUnit ======
+
+-- ============ ControlUnit ==============
 COMPONENT ControlUnit IS
     PORT(
         RegisteryWriteEnable, RegisteryDistination, 
@@ -135,54 +125,54 @@ COMPONENT ControlUnit IS
         OPCode, Funct        : IN STD_LOGIC_VECTOR(5 DOWNTO 0)
     );
 END COMPONENT; 
--- ========================
+-- ==========================================
 
--- 11
--- ====== Data Path ======
+
+-- ============ Data Path ==============
 COMPONENT DataPath IS
     PORT(
 		-- Inputs
-		clk, reset: IN STD_LOGIC;
-		PCSrouce: IN STD_LOGIC;
-		BypassMemory, Jump: IN STD_LOGIC;
-		RegisteryWriteEnable, RegisteryDistination: IN STD_LOGIC;
-		ALUSource: IN STD_LOGIC;
-        ALUControl : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-		ReadData, Instruction: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		clk, reset              : IN STD_LOGIC;
+		PCSrouce                : IN STD_LOGIC;
+		BypassMemory, Jump      : IN STD_LOGIC;
+		RegisteryWriteEnable    : IN STD_LOGIC;
+        RegisteryDistination    : IN STD_LOGIC;
+		ALUSource               : IN STD_LOGIC;
+        ALUControl              : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		ReadData, Instruction   : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 		-- Ouputs
-		Zero_Flag	: OUT STD_LOGIC;
-		PC			: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-		ALU_Output	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-		WriteData	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0)	
+		Zero_Flag	            : OUT STD_LOGIC;
+		PC			            : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		ALUOutput	            : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+		WriteData	            : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)	
 	);
 END COMPONENT; 
--- ========================
+-- ==========================================
 
--- 12
--- ====== MIPS ======
+
+-- ================== MIPS ==================
 COMPONENT MIPS IS
     PORT(
-        ALU_Output, WriteData, PC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-        Instruction, ReadData : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-        MemoryReadWriteEnable : OUT STD_LOGIC;
-        clk, reset : IN STD_LOGIC
+        ALUOutput, WriteData, PC    : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+        Instruction, ReadData       : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+        MemoryReadWriteEnable       : OUT STD_LOGIC;
+        clk, reset                  : IN STD_LOGIC
     );
 END COMPONENT; 
--- ========================
+-- ==========================================
 
--- 13
--- ====== TopLevel ======
+
+-- ================== TopLevel ==================
 COMPONENT TopLevel IS
     PORT(
-        clk, reset : IN STD_LOGIC;
-        WriteData, ALU_Output, PC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-        MemoryReadWriteEnable : OUT STD_LOGIC
+        clk, reset                  : IN STD_LOGIC;
+        WriteData, ALUOutput, PC    : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+        MemoryReadWriteEnable       : OUT STD_LOGIC
     );
 END COMPONENT; 
--- ========================
+-- ==========================================
 
 
 END packages;
--- ==================================================================
 

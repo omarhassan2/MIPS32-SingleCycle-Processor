@@ -3,7 +3,7 @@
 -- Author(s): Karim Elghamry (kimos20139@gmail.com)
 --            Omar Hassan (oh458886@gmail.com)
 -- Description: 
---
+--              Initialize the MIPS with reset and clock.
 -- Revision History:
 --   5/6/2024: Initial
 -- =====================================================================
@@ -19,17 +19,16 @@ USE WORK.Packages.ALL;
 
 
 
-entity testbench is
-end;
+ENTITY TestBech IS
+END;
 
 
-architecture test of testbench is
-    signal clk, reset, MemoryReadWriteEnable: STD_LOGIC:= '0';
-	signal PC, WriteData, DataAddress: STD_LOGIC_VECTOR(31 downto 0):= X"00000000";
-begin
-
+ARCHITECTURE Arch_TestBech OF TestBech IS
+    SIGNAL clk, reset, MemoryReadWriteEnable: STD_LOGIC:= '0';
+	SIGNAL PC, WriteData, DataAddress: STD_LOGIC_VECTOR(31 DOWNTO 0):= X"00000000";
+BEGIN
     -- instantiate device to be tested
-    TopLevel: TopLevel port map (
+    TopLevel: TopLevel PORT MAP(
         clk, 
         reset, 
         WriteData, 
@@ -39,19 +38,19 @@ begin
     );
 
     -- Generate clock with 10 ns period
-    process begin
+    PROCESS BEGIN
         clk <= '1';
-        wait for 5 ns;
+        WAIT FOR 5 ns;
         clk <= '0';
-        wait for 5 ns;
-    end process;
+        WAIT FOR 5 ns;
+    END PROCESS;
 
-    -- Generate reset for first two clock cycles
-    process begin
+    -- Generate reset for first clock cycle
+    PROCESS BEGIN
         reset <= '1';
-        wait for 5 ns;
+        WAIT FOR 5 ns;
         reset <= '0';
-        wait;
-    end process;
+        WAIT;
+    END PROCESS;
 
-end;
+END Arch_TestBech;
