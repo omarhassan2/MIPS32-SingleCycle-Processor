@@ -37,7 +37,8 @@ END DataMemory;
 -- =========== Architectures Section ===========
 ARCHITECTURE Arch_DataMemory OF DataMemory IS
 	TYPE Memory IS ARRAY (0 to 1023) OF STD_LOGIC_VECTOR(31 DOWNTO 0);
-	SIGNAL Data: Memory:=(
+	SIGNAL Data: Memory:=( 
+		X"00000008",
 		OTHERS => X"00000000"
 	);
 BEGIN
@@ -46,8 +47,10 @@ BEGIN
 		IF (FALLING_EDGE(clk)) THEN
 			IF (WriteEnable = '1') THEN 
 				Data(TO_INTEGER(UNSIGNED(Address))) <= WriteData;
-			ELSE
-				ReadData <= Data(TO_INTEGER(UNSIGNED(Address)));	
+			ELSE   
+				IF(Address < 1023) THEN
+					ReadData <= Data(TO_INTEGER(UNSIGNED(Address)));
+				END IF;	
 			END IF;	 
 		END IF;			
 	END PROCESS; 
