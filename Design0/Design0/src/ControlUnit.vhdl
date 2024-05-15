@@ -23,9 +23,9 @@ ENTITY ControlUnit IS
 	PORT(
 		RegisteryWriteEnable, RegisteryDistination, 
         ALUSource, Branch, MemoryReadWriteEnable, 
-        BypassMemory, Jump : OUT STD_LOGIC;
-        ALUControl : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-		OPCode, Funct : IN STD_LOGIC_VECTOR(5 DOWNTO 0)
+        BypassMemory, Jump       : OUT STD_LOGIC;
+        ALUControl               : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+		OPCode, Funct            : IN STD_LOGIC_VECTOR(5 DOWNTO 0)
 	);
 END ControlUnit; 
 -- ==============================================
@@ -37,9 +37,9 @@ ARCHITECTURE Arch_ControlUnit OF ControlUnit IS
     SIGNAL OutputControl: STD_LOGIC_VECTOR(10 DOWNTO 0);
         BEGIN 
             PROCESS(OPCode) BEGIN
-                CASE OPCode is
+                CASE OPCode IS
                     WHEN "000000" => -- R-Type Instructions (ALU)
-                        CASE Funct is
+                        CASE Funct IS
                             WHEN "100000" => -- Add
                                 OutputControl <= "1100000" & "0010";
                             WHEN "100010" => -- Subtract

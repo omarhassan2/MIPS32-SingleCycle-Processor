@@ -3,11 +3,8 @@
 -- @Author: Shehap Shukri ghzal (sh.s.ghazal2003.com)
 -- 
 -- @Description :
---      - INstruction memory stores machINe INstructions for CPU execution IN a computer system
---      - INstruction memory IS vital for program execution efficiency and system responsiveness
---      - INstruction memory design focUSEs on speed optimization techniques like cachINg and prefetchINg
---
--- @RevISion HIStory: 4-5-2024
+--      - Instruction memory stores machine instructions for CPU execution in a computer system.
+-- @Revision History: 4-5-2024
 -- =====================================================================
 
 
@@ -24,17 +21,17 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 -- =========== Entities Section =============
 ENTITY InstructionMemory IS
     PORT (
-       Address       : IN  std_logic_vector(31 DOWNTO 0);
-       Instruction   : OUT std_logic_vector(31 DOWNTO 0)
+       Address       : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+       Instruction   : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END InstructionMemory;
 -- =========================================
 
 
 
--- =========== ARCHITECTUREs Section ===========
+-- =========== Architectures Section ===========
 ARCHITECTURE Arch_InstructionMemory OF InstructionMemory IS
-    type memory IS array (0 to 63) OF std_logic_vector(31 DOWNTO 0);
+    TYPE memory IS ARRAY (0 TO 63) OF STD_LOGIC_VECTOR(31 DOWNTO 0);
     SIGNAL Instructions: memory := (
      -- We can write the Instruction here.... 
 
@@ -78,7 +75,8 @@ ARCHITECTURE Arch_InstructionMemory OF InstructionMemory IS
     OTHERS => (OTHERS => '0')	   
     );
 BEGIN 
-	Instruction <= Instructions(to_integer(unsigned(Address)));
+
+	Instruction <= Instructions(TO_INTEGER(UNSIGNED(Address)));
 
 END Arch_InstructionMemory;
 -- =========================================

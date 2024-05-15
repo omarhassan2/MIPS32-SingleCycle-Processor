@@ -19,10 +19,10 @@ USE WORK.Packages.ALL;
 -- ============= Entities Section ===============
 ENTITY MIPS IS
 	PORT(
-		ALU_Output, WriteData, PC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-        Instruction, ReadData : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
-        MemoryReadWriteEnable : OUT STD_LOGIC;
-        clk, reset : IN STD_LOGIC
+		ALUOutput, WriteData, PC    : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+        Instruction, ReadData       : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+        MemoryReadWriteEnable       : OUT STD_LOGIC;
+        clk, reset                  : IN STD_LOGIC
 	);
 END MIPS; 
 -- ==============================================
@@ -31,7 +31,6 @@ END MIPS;
 
 -- =========== Architectures Section ============
 ARCHITECTURE Arch_MIPS OF MIPS IS
-	--SIGNAL PC_Signal, ALU_Output_Signal, WriteData_Signal : STD_LOGIC_VECTOR (31 DOWNTO 0):= X"00000000";
     SIGNAL RegisteryWriteEnable, RegisteryDistination, ALUSource, Branch, BypassMemory, Jump : STD_LOGIC:= '0';
     SIGNAL ALUControl       :  STD_LOGIC_VECTOR(3 DOWNTO 0):= "0000";
     SIGNAL Zero_Flag        :  STD_LOGIC:= '0';
@@ -39,7 +38,7 @@ ARCHITECTURE Arch_MIPS OF MIPS IS
 
         BEGIN 
 
-            Control: ControlUnit PORT MAP (
+            Control: ControlUnit PORT MAP(
                 RegisteryWriteEnable,
                 RegisteryDistination,
                 ALUSource,
@@ -66,11 +65,10 @@ ARCHITECTURE Arch_MIPS OF MIPS IS
                 Instruction,
                 Zero_Flag,
                 PC,
-               	ALU_Output,
+               	ALUOutput,
                 WriteData
             );	
 			PCSource <= Zero_Flag AND Branch;
- 
 
 END Arch_MIPS;
 -- ==============================================

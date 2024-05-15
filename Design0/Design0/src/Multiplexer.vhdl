@@ -3,13 +3,13 @@
 -- @Author: Mohamed Gehad (ENGMGehad@gmail.com)
 --
 -- @Description: 
---		- ThIS IS a multiplexer module with :
---				- Two INputs (IN0 and IN1). 
--- 				- Select SIGNAL (sl).
---				- One OUTput (OUTput).
--- 		- It selects between IN0 and IN1 based on the value OF the select SIGNAL.
+--		- This is a multiplexer module with :
+--				- Two inputs (IN0 and IN1). 
+-- 				- Select signal (sl).
+--				- One output (OUTput).
+-- 		- It selects between IN0 and IN1 based on the value of the select signal.
 --
--- @RevISion HIStory: 4-5-2024
+-- @Revision History: 4-5-2024
 -- =====================================================================
 
 
@@ -25,11 +25,11 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- =========== Entities Section =============
 ENTITY Multiplexer  IS
-	GENERIC (Bits: integer:= 32);
+	GENERIC (Bits: INTEGER:= 32);
 	PORT(
-		Selector: IN std_logic;
-		IN0,IN1: IN std_logic_vector(Bits - 1 DOWNTO 0);
-		OUTput: OUT std_logic_vector(Bits - 1 DOWNTO 0)
+		Selector	: IN STD_LOGIC;
+		IN0,IN1		: IN STD_LOGIC_VECTOR(Bits - 1 DOWNTO 0);
+		Output		: OUT STD_LOGIC_VECTOR(Bits - 1 DOWNTO 0)
 	);
 END Multiplexer; 
 -- ==========================================
@@ -39,6 +39,6 @@ END Multiplexer;
 -- =========== Architectures Section ===========
 ARCHITECTURE Arch_Multiplexer OF Multiplexer IS
 	BEGIN 
-		OUTput<= IN0 WHEN (Selector = '0') ELSE IN1;
+		Output<= IN0 WHEN (Selector = '0') ELSE IN1;
 END Arch_Multiplexer;
 -- =============================================
