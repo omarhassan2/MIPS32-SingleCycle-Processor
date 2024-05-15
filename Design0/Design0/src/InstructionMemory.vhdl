@@ -68,7 +68,7 @@ ARCHITECTURE Arch_InstructionMemory OF InstructionMemory IS
 
 		"101011" & "00000" & "00001" & "0000000000000001",				-- 13: sw R1 1(R0)
 
-		"001000" & "00000" & "00101" & "0000000000000000",	 			-- 14 addi R5 = R0 + 0
+		"001000" & "00000" & "00001" & "0000000000000000",	 			-- 14 addi R1 = R0 + 0
 
     OTHERS => (OTHERS => '0')	   
     );
