@@ -18,30 +18,31 @@ USE IEEE.NUMERIC_STD.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 -- =========================================
 
-
+-- ====================== Package Section ======================
 PACKAGE packages IS	 
 	
--- =========== ShiftLeft2 =============
+-- 1	
+-- ====== ShiftLeft2 ======
 COMPONENT ShiftLeft2 IS
     PORT(
         input : in std_logic_vector(31 downto 0);
         output: OUT std_logic_vector(31 downto 0)
     );
 END COMPONENT;
--- ====================================
+-- ========================
 
-
--- =========== SignExtender ==========
+-- 2
+-- ====== SignExtender ======
 COMPONENT SignExtender IS
     PORT(
         input  : IN   std_logic_vector(15 DOWNTO 0); 
 		output : OUT  std_logic_vector(31 DOWNTO 0)
     );
 END COMPONENT;
--- ====================================
+-- ========================
 
-
--- =========== Multiplexer ============
+-- 3
+-- ====== Multiplexer ======
 COMPONENT Multiplexer IS
     GENERIC (Bits: integer);
     PORT(
@@ -50,20 +51,20 @@ COMPONENT Multiplexer IS
         OUTput: OUT std_logic_vector(Bits - 1 DOWNTO 0)
     );
 END COMPONENT;
--- ====================================
+-- ========================
 
-
--- ============== Adder ===============
+-- 4
+-- ====== Adder ======
 COMPONENT Adder IS
     PORT(
         IN0, IN1: IN  std_logic_vector(31 DOWNTO 0);
         OUTput:   OUT std_logic_vector(31 DOWNTO 0)
     );
 END COMPONENT;
--- ====================================
+-- ========================
 
-
--- =========== DataMemory ============
+-- 5
+-- ====== DataMemory ======
 COMPONENT DataMemory IS
     PORT (
         clk,WriteEnable: IN std_logic;
@@ -71,20 +72,20 @@ COMPONENT DataMemory IS
         ReadData: OUT std_logic_vector(31 DOWNTO 0)
     );
 END COMPONENT;
--- ====================================
+-- ========================
 
-
--- =========== InstructionMemory =============
+-- 6
+-- ====== InstructionMemory ======
 COMPONENT InstructionMemory IS
     PORT (
        Address       : IN  std_logic_vector(31 DOWNTO 0);
        INstruction   : OUT std_logic_vector(31 DOWNTO 0)
 	);
 END COMPONENT;
--- =========================================
+-- ========================
 
-
--- =================== ALU ==================
+-- 7
+-- ====== ALU ======
 COMPONENT ALU IS 
 	PORT(
 		ALU_Input_One : IN  std_logic_vector(31 DOWNTO 0); 
@@ -94,10 +95,10 @@ COMPONENT ALU IS
 		Zero_Flag     : OUT std_logic
 	);
 END COMPONENT;
--- =========================================
+-- ========================
 
-
--- =========== RegISterFiles ===============
+-- 8
+-- ====== RegISterFiles ======
 COMPONENT RegISterFiles IS
     PORT (
         CLK: IN STD_LOGIC;
@@ -110,10 +111,10 @@ COMPONENT RegISterFiles IS
         ReadDataTwo     : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)  -- RD2
     );
 END COMPONENT;
--- =========================================
+-- ========================
 
-
--- ============ ProgramCounter ==============
+-- 9
+-- ====== ProgramCounter ======
 COMPONENT ProgramCounter IS
 	PORT(
         clk,reset : IN std_logic;
@@ -121,10 +122,10 @@ COMPONENT ProgramCounter IS
         output : OUT std_logic_vector(31 DOWNTO 0)
 	);
 END COMPONENT; 
--- ==========================================
+-- ========================
 
-
--- ============ ControlUnit ==============
+-- 10
+-- ====== ControlUnit ======
 COMPONENT ControlUnit IS
     PORT(
         RegisteryWriteEnable, RegisteryDistination, 
@@ -134,10 +135,10 @@ COMPONENT ControlUnit IS
         OPCode, Funct        : IN STD_LOGIC_VECTOR(5 DOWNTO 0)
     );
 END COMPONENT; 
--- ==========================================
+-- ========================
 
-
--- ============ Data Path ==============
+-- 11
+-- ====== Data Path ======
 COMPONENT DataPath IS
     PORT(
 		-- Inputs
@@ -156,10 +157,10 @@ COMPONENT DataPath IS
 		WriteData	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0)	
 	);
 END COMPONENT; 
--- ==========================================
+-- ========================
 
-
--- ================== MIPS ==================
+-- 12
+-- ====== MIPS ======
 COMPONENT MIPS IS
     PORT(
         ALU_Output, WriteData, PC : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -168,10 +169,10 @@ COMPONENT MIPS IS
         clk, reset : IN STD_LOGIC
     );
 END COMPONENT; 
--- ==========================================
+-- ========================
 
-
--- ================== Arch_TopLevel ==================
+-- 13
+-- ====== TopLevel ======
 COMPONENT TopLevel IS
     PORT(
         clk, reset : IN STD_LOGIC;
@@ -179,8 +180,9 @@ COMPONENT TopLevel IS
         MemoryReadWriteEnable : OUT STD_LOGIC
     );
 END COMPONENT; 
--- ==========================================
+-- ========================
 
 
 END packages;
+-- ==================================================================
 

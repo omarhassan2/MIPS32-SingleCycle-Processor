@@ -1,16 +1,17 @@
-i<>d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\mips.vhdl
-i<>d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\datapath.vhdl
-i<>d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\alu.vhdl
-i<>d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\adder.vhdl
-i<>d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\packages.vhdl
-i<>d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\controlunit.vhdl
-i<>d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\multiplexer.vhdl
-i<>d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\programcounter.vhdl
-i<>d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\toplevel.vhdl
-i<>d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\shiftleft2.vhdl
-i<>d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\registerfiles.vhdl
-i<>d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\sign_extender.vhdl
-i<>d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\datamemory.vhdl
-i<>d:\cse_2_term__2\hardware design\project\mips32-singlecycle-processor\instructionmemory.vhdl
-i<>D:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\TestBench.vhdl
+i<>.\src\Adder.vhdl
+i<>.\src\ALU.vhdl
 i<>.\src\BlockDiagram.bde
+i<>.\src\ControlUnit.vhdl
+i<>.\src\DataMemory.vhdl
+i<>.\src\DataPath.vhdl
+i<>.\src\InstructionMemory.vhdl
+i<>.\src\MIPS.vhdl
+i<>.\src\Multiplexer.vhdl
+i<>.\src\Packages.vhdl
+i<>.\src\ProgramCounter.vhdl
+i<>.\src\RegisterFiles.vhdl
+i<>.\src\Schematic.bde
+i<>.\src\ShiftLeft2.vhdl
+i<>.\src\sign_extender.vhdl
+i<>.\src\TestBench.vhdl
+i<>.\src\TopLevel.vhdl

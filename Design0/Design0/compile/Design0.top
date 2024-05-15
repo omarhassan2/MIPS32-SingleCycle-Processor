@@ -1,1 +1,4 @@
 testbench ENTITY
+ShiftLeft2 ENTITY
+BlockDiagram ENTITY
+Schematic ENTITY

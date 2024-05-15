@@ -1,7 +1,7 @@
 [Version]
 Version=6.3
 [Designs]
-design0=.\Design0\Design0.adf
+design0=.\design0\design0.adf
 [Browser]
 sort=order
 mode=none

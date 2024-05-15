@@ -7,7 +7,7 @@
 --      - It operates on fixed-size vectors and produces the sum as OUTput.
 --      - The module IS parameterized with the vector size (N).
 -- 
--- @RevISion HIStory: 4-5-2024
+-- @Revision HIStory: 4-5-2024
 -- =====================================================================
 
 

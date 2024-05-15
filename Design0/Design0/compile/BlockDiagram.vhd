@@ -1,15 +1,15 @@
 ---------------------------------------------------------------------------------------------------
 --
 -- Title       : BlockDiagram
--- Design      : Design0
+-- Design      : design0
 -- Author      : Omar Hassan
 -- Company     : Lenvo ideapad 5
 --
 ---------------------------------------------------------------------------------------------------
 --
--- File        : d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Design0\Design0\compile\BlockDiagram.vhd
--- Generated   : Fri May 10 01:13:55 2024
--- From        : d:\CSE_2_Term__2\Hardware Design\Project\MIPS32-SingleCycle-Processor\Design0\Design0\src\BlockDiagram.bde
+-- File        : D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\compile\BlockDiagram.vhd
+-- Generated   : Wed May 15 03:11:23 2024
+-- From        : D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\BlockDiagram.bde
 -- By          : Bde2Vhdl ver. 2.6
 --
 ---------------------------------------------------------------------------------------------------
