@@ -1,20 +1,20 @@
 # MIPS32 Single Cycle Processor
 
-🚀 Welcome to the MIPS32 SINgle Cycle PROCESSor repository! 🚀
+🚀 Welcome to the MIPS32 Single Cycle Processor repository! 🚀
 
-ThIS repository contaINs an implementation OF a sINgle cycle PROCESSor that adheres to the MIPS ISA (INstruction Set ARCHITECTURE) 32-bit.
+This repository contains an implementation of a single cycle processor that adheres to the MIPS ISA (Instruction Set Architecture) 32-bit.
 
 ## Overview
 
-🔍 The MIPS32 SINgle Cycle PROCESSor IS designed to execute INstructions IN a sINgle clock cycle. It supPORTs the MIPS ISA, which IS a RISC (Reduced INstruction Set ComputINg) ARCHITECTURE widely USEd IN academia and INdustry.
+🔍 The MIPS32 Single Cycle Processor is designed to execute instructions in a single clock cycle. It supports the MIPS ISA, which is a RisC (Reduced instruction Set Computing) architecture widely used in academia and industry.
 
 ## Features
 
-🤖 **SINgle Cycle Execution:** Each INstruction IS executed IN a sINgle clock cycle.
-🔧 **MIPS ISA SupPORT:** Implements the MIPS ISA 32-bit INstructions.
-🔢 **Basic Components:** The PROCESSor consISts OF essential components like ALU, regISters, control unit, and memory.
+🤖 **Single Cycle Execution:** Each instruction is executed in a single clock cycle.
+🔧 **MIPS ISA Support:** Implements the MIPS ISA 32-bit instructions.
+🔢 **Basic Components:** The processor consists of essential components like ALU, registers, control unit, and memory.
 
-## ARCHITECTURE
+## Architecture
 
 ![ARCHITECTURE](/MIPS32-SingleCycle-Processor.png)
 
@@ -22,12 +22,12 @@ ThIS repository contaINs an implementation OF a sINgle cycle PROCESSor that adhe
 
 ![TOP-VIEW](/MIPS%20Top%20View.png)
 
-## GettINg Started
+## Getting Started
 
-🏁 To get started with thIS project, follow these steps:
+🏁 To get started with this project, follow these steps:
 
-1. **Clone the Repository:** `git clone https://github.com/omarhassan2/MIPS32-SINgleCycle-PROCESSor.git`
-2. **Explore the Code:** Review the Verilog/VHDL code files to understand the PROCESSor's implementation.
-3. **Simulation:** USE a Verilog/VHDL simulator to simulate the PROCESSor and test its functionality.
-4. **INtegration:** INtegrate the PROCESSor INto your desired hardware environment or FPGA platform.
-5. **Contribute:** Feel free to contribute to the project by submittINg bug fixes, improvements, or new features through pull requests.
+1. **Clone the Repository:** `git clone https://github.com/omarhassan2/MIPS32-SingleCycle-Processor.git`
+2. **Explore the Code:** Review the VHDL code files to understand the Processor's implementation.
+3. **Simulation:** USE a VHDL simulator to simulate the processor and test its functionality.
+4. **integration:** Integrate the Processor into your desired hardware environment or FPGA platform.
+5. **Contribute:** Feel free to contribute to the project by submitting bug fixes, improvements, or new features through pull requests.
