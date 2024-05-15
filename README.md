@@ -20,7 +20,7 @@ ThIS repository contaINs an implementation OF a sINgle cycle PROCESSor that adhe
 
 ## TOP-VIEW
 
-![TOP-VIEW](/MIPS Top View.png)
+![TOP-VIEW](/MIPS%20Top%20View.png)
 
 ## GettINg Started
 
