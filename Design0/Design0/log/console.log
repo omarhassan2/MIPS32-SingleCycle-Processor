@@ -1,133 +1,20 @@
-# Design: Design design0 already active.
-acom -reorder $DSN/src/adder.vhdl $DSN/src/alu.vhdl $DSN/src/blockdiagram.bde $DSN/src/controlunit.vhdl $DSN/src/datamemory.vhdl $DSN/src/datapath.vhdl $DSN/src/instructionmemory.vhdl $DSN/src/mips.vhdl $DSN/src/multiplexer.vhdl $DSN/src/packages.vhdl $DSN/src/programcounter.vhdl $DSN/src/registerfiles.vhdl $DSN/src/schematic.bde $DSN/src/shiftleft2.vhdl $DSN/src/sign_extender.vhdl $DSN/src/testbench.vhdl $DSN/src/toplevel.vhdl
-# Compile with File Reorder...
-# DRC: Checking file 'D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\BlockDiagram.bde'.
-# DRC: Warning: BlockDiagram.bde - 0 error(s), 5 warning(s)
-# DRC: The results have been written to the log file. Double click on this line to view the log.
-# Generating D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\compile\BlockDiagram.vhd from D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\BlockDiagram.bde ...
-# Generation successful
-# DRC: Checking file 'D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Schematic.bde'.
-# DRC: Schematic.bde - 0 error(s), 0 warning(s)
-# DRC: The results have been written to the log file. Double click on this line to view the log.
-# Generating D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\compile\Schematic.vhd from D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Schematic.bde ...
-# Generation successful
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Adder.vhdl
-# Compile Entity "Adder"
-# Compile Architecture "Arch_Adder" of Entity "Adder"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ALU.vhdl
-# Compile Entity "ALU"
-# Compile Architecture "Arch_ALU" of Entity "ALU"
-# File: .\BlockDiagram.vhd
-# Compile Entity "BlockDiagram"
-# Compile Architecture "BlockDiagram" of Entity "BlockDiagram"
-# Warning: ELAB1_0026: BlockDiagram.bde(BlockDiagram.vhd) : (107, 0): There is no default binding for component "ControlUnit".(No entity named "ControlUnit" was found).
-# Warning: ELAB1_0026: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): There is no default binding for component "datapath".(No entity named "datapath" was found).
-# Warning: ELAB1_0026: BlockDiagram.bde(BlockDiagram.vhd) : (152, 0): There is no default binding for component "InstructionMemory".(No entity named "InstructionMemory" was found).
-# Warning: ELAB1_0026: BlockDiagram.bde(BlockDiagram.vhd) : (158, 0): There is no default binding for component "DataMemory".(No entity named "DataMemory" was found).
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ControlUnit.vhdl
-# Compile Entity "ControlUnit"
-# Compile Architecture "Arch_ControlUnit" of Entity "ControlUnit"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\DataMemory.vhdl
-# Compile Entity "DataMemory"
-# Compile Architecture "arch" of Entity "DataMemory"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\DataPath.vhdl
-# Compile Entity "DataPath"
-# Error: COMP96_0055: DataPath.vhdl : (17, 9): Cannot find referenced context element.
-# Compile Architecture "Arch_DataPath" of Entity "DataPath"
-# Error: COMP96_0056: DataPath.vhdl : (46, 1): Cannot find referenced entity declaration "DataPath".
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\InstructionMemory.vhdl
-# Compile Entity "InstructionMemory"
-# Compile Architecture "Arch_InstructionMemory" of Entity "InstructionMemory"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\MIPS.vhdl
-# Compile Entity "MIPS"
-# Error: COMP96_0055: MIPS.vhdl : (14, 9): Cannot find referenced context element.
-# Compile Architecture "Arch_MIPS" of Entity "MIPS"
-# Error: COMP96_0056: MIPS.vhdl : (33, 1): Cannot find referenced entity declaration "MIPS".
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Multiplexer.vhdl
-# Compile Entity "Multiplexer"
-# Compile Architecture "Arch_Multiplexer" of Entity "Multiplexer"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Packages.vhdl
-# Compile Package "packages"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ProgramCounter.vhdl
-# Compile Entity "ProgramCounter"
-# Compile Architecture "Arch_ProgramCounter" of Entity "ProgramCounter"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\RegisterFiles.vhdl
-# Compile Entity "RegisterFiles"
-# Compile Architecture "Arch_RegisterFiles" of Entity "RegisterFiles"
-# File: .\Schematic.vhd
-# Compile Entity "Schematic"
-# Compile Architecture "Schematic" of Entity "Schematic"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ShiftLeft2.vhdl
-# Compile Entity "ShiftLeft2"
-# Compile Architecture "Arch_ShiftLeft2" of Entity "ShiftLeft2"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\sign_extender.vhdl
-# Compile Entity "SignExtender"
-# Compile Architecture "Arch_Extender" of Entity "SignExtender"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\TestBench.vhdl
-# Compile Entity "testbench"
-# Compile Architecture "test" of Entity "testbench"
-# Warning: ELAB1_0026: TestBench.vhdl : (32, 0): There is no default binding for component "TopLevel".(No entity named "TopLevel" was found).
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\TopLevel.vhdl
-# Compile Entity "TopLevel"
-# Compile Architecture "Arch_TopLevel" of Entity "TopLevel"
-# Warning: ELAB1_0026: TopLevel.vhdl : (38, 0): There is no default binding for component "MIPS".(No entity named "MIPS" was found).
-# Improper file order detected for referenced units
-# Automatic file reorder and recompilation required.
-# File reorder and recompilation in progress
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\DataPath.vhdl
-# Compile Entity "DataPath"
-# Compile Architecture "Arch_DataPath" of Entity "DataPath"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\MIPS.vhdl
-# Compile Entity "MIPS"
-# Compile Architecture "Arch_MIPS" of Entity "MIPS"
-# File: .\BlockDiagram.vhd
-# Compile Entity "BlockDiagram"
-# Entity `BlockDiagram' has been skipped - no difference detected.
-# Compile Architecture "BlockDiagram" of Entity "BlockDiagram"
-# Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "Zero_Flag".
-# Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "PC".
-# Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "ALU_Output".
-# Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "WriteData".
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\TestBench.vhdl
-# Compile Entity "testbench"
-# Entity `testbench' has been skipped - no difference detected.
-# Compile Architecture "test" of Entity "testbench"
-# Improper file order detected
-# Automatic file reorder and recompilation required.
-# File reorder and recompilation in progress
-# Top-Level unit detected
-# Entity  =>   testbench
-# Entity  =>   ShiftLeft2
-# Entity  =>   BlockDiagram
-# Entity  =>   Schematic
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\DataPath.vhdl
-# Compile Entity "DataPath"
-# Entity `DataPath' has been skipped - no difference detected.
-# Compile Architecture "Arch_DataPath" of Entity "DataPath"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\MIPS.vhdl
-# Compile Entity "MIPS"
-# Entity `MIPS' has been skipped - no difference detected.
-# Compile Architecture "Arch_MIPS" of Entity "MIPS"
-# File: .\BlockDiagram.vhd
-# Compile Entity "BlockDiagram"
-# Entity `BlockDiagram' has been skipped - no difference detected.
-# Compile Architecture "BlockDiagram" of Entity "BlockDiagram"
-# Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "Zero_Flag".
-# Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "PC".
-# Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "ALU_Output".
-# Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "WriteData".
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\TestBench.vhdl
-# Compile Entity "testbench"
-# Entity `testbench' has been skipped - no difference detected.
-# Compile Architecture "test" of Entity "testbench"
-# Compile failure 4 Errors 0 Warnings  Analysis time :  3.0 [s]
 acom $DSN/src/adder.vhdl $DSN/src/alu.vhdl $DSN/src/blockdiagram.bde $DSN/src/controlunit.vhdl $DSN/src/datamemory.vhdl $DSN/src/datapath.vhdl $DSN/src/instructionmemory.vhdl $DSN/src/mips.vhdl $DSN/src/multiplexer.vhdl $DSN/src/packages.vhdl $DSN/src/programcounter.vhdl $DSN/src/registerfiles.vhdl $DSN/src/schematic.bde $DSN/src/shiftleft2.vhdl $DSN/src/sign_extender.vhdl $DSN/src/testbench.vhdl $DSN/src/toplevel.vhdl
 # Compile...
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Adder.vhdl
+# DRC: Checking file 'd:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\BlockDiagram.bde'.
+# DRC: Warning: BlockDiagram.bde - 0 error(s), 5 warning(s)
+# DRC: The results have been written to the log file. Double click on this line to view the log.
+# Generating d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\compile\BlockDiagram.vhd from d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\BlockDiagram.bde ...
+# Generation successful
+# DRC: Checking file 'd:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Schematic.bde'.
+# DRC: Schematic.bde - 0 error(s), 0 warning(s)
+# DRC: The results have been written to the log file. Double click on this line to view the log.
+# Generating d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\compile\Schematic.vhd from d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Schematic.bde ...
+# Generation successful
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Adder.vhdl
 # Compile Entity "Adder"
 # Entity `Adder' has been skipped - no difference detected.
 # Compile Architecture "Arch_Adder" of Entity "Adder"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ALU.vhdl
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ALU.vhdl
 # Compile Entity "ALU"
 # Entity `ALU' has been skipped - no difference detected.
 # Compile Architecture "Arch_ALU" of Entity "ALU"
@@ -139,38 +26,38 @@ acom $DSN/src/adder.vhdl $DSN/src/alu.vhdl $DSN/src/blockdiagram.bde $DSN/src/co
 # Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "PC".
 # Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "ALU_Output".
 # Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "WriteData".
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ControlUnit.vhdl
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ControlUnit.vhdl
 # Compile Entity "ControlUnit"
 # Entity `ControlUnit' has been skipped - no difference detected.
 # Compile Architecture "Arch_ControlUnit" of Entity "ControlUnit"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\DataMemory.vhdl
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\DataMemory.vhdl
 # Compile Entity "DataMemory"
 # Entity `DataMemory' has been skipped - no difference detected.
 # Compile Architecture "arch" of Entity "DataMemory"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\DataPath.vhdl
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\DataPath.vhdl
 # Compile Entity "DataPath"
 # Entity `DataPath' has been skipped - no difference detected.
 # Compile Architecture "Arch_DataPath" of Entity "DataPath"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\InstructionMemory.vhdl
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\InstructionMemory.vhdl
 # Compile Entity "InstructionMemory"
 # Entity `InstructionMemory' has been skipped - no difference detected.
 # Compile Architecture "Arch_InstructionMemory" of Entity "InstructionMemory"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\MIPS.vhdl
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\MIPS.vhdl
 # Compile Entity "MIPS"
 # Entity `MIPS' has been skipped - no difference detected.
 # Compile Architecture "Arch_MIPS" of Entity "MIPS"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Multiplexer.vhdl
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Multiplexer.vhdl
 # Compile Entity "Multiplexer"
 # Entity `Multiplexer' has been skipped - no difference detected.
 # Compile Architecture "Arch_Multiplexer" of Entity "Multiplexer"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Packages.vhdl
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Packages.vhdl
 # Compile Package "packages"
 # Package `packages' has been skipped - no difference detected.
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ProgramCounter.vhdl
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ProgramCounter.vhdl
 # Compile Entity "ProgramCounter"
 # Entity `ProgramCounter' has been skipped - no difference detected.
 # Compile Architecture "Arch_ProgramCounter" of Entity "ProgramCounter"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\RegisterFiles.vhdl
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\RegisterFiles.vhdl
 # Compile Entity "RegisterFiles"
 # Entity `RegisterFiles' has been skipped - no difference detected.
 # Compile Architecture "Arch_RegisterFiles" of Entity "RegisterFiles"
@@ -178,94 +65,20 @@ acom $DSN/src/adder.vhdl $DSN/src/alu.vhdl $DSN/src/blockdiagram.bde $DSN/src/co
 # Compile Entity "Schematic"
 # Entity `Schematic' has been skipped - no difference detected.
 # Compile Architecture "Schematic" of Entity "Schematic"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ShiftLeft2.vhdl
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ShiftLeft2.vhdl
 # Compile Entity "ShiftLeft2"
 # Entity `ShiftLeft2' has been skipped - no difference detected.
 # Compile Architecture "Arch_ShiftLeft2" of Entity "ShiftLeft2"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\sign_extender.vhdl
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\sign_extender.vhdl
 # Compile Entity "SignExtender"
 # Entity `SignExtender' has been skipped - no difference detected.
 # Compile Architecture "Arch_Extender" of Entity "SignExtender"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\TestBench.vhdl
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\TestBench.vhdl
 # Compile Entity "testbench"
 # Entity `testbench' has been skipped - no difference detected.
 # Compile Architecture "test" of Entity "testbench"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\TopLevel.vhdl
+# File: d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\TopLevel.vhdl
 # Compile Entity "TopLevel"
 # Entity `TopLevel' has been skipped - no difference detected.
 # Compile Architecture "Arch_TopLevel" of Entity "TopLevel"
 # Compile failure 4 Errors 0 Warnings  Analysis time :  2.0 [s]
-acom $DSN/src/adder.vhdl $DSN/src/alu.vhdl $DSN/src/blockdiagram.bde $DSN/src/controlunit.vhdl $DSN/src/datamemory.vhdl $DSN/src/datapath.vhdl $DSN/src/instructionmemory.vhdl $DSN/src/mips.vhdl $DSN/src/multiplexer.vhdl $DSN/src/packages.vhdl $DSN/src/programcounter.vhdl $DSN/src/registerfiles.vhdl $DSN/src/schematic.bde $DSN/src/shiftleft2.vhdl $DSN/src/sign_extender.vhdl $DSN/src/testbench.vhdl $DSN/src/toplevel.vhdl
-# Compile...
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Adder.vhdl
-# Compile Entity "Adder"
-# Entity `Adder' has been skipped - no difference detected.
-# Compile Architecture "Arch_Adder" of Entity "Adder"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ALU.vhdl
-# Compile Entity "ALU"
-# Entity `ALU' has been skipped - no difference detected.
-# Compile Architecture "Arch_ALU" of Entity "ALU"
-# File: .\BlockDiagram.vhd
-# Compile Entity "BlockDiagram"
-# Entity `BlockDiagram' has been skipped - no difference detected.
-# Compile Architecture "BlockDiagram" of Entity "BlockDiagram"
-# Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "Zero_Flag".
-# Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "PC".
-# Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "ALU_Output".
-# Error: ELAB1_0022: BlockDiagram.bde(BlockDiagram.vhd) : (131, 0): Incompatible modes for port "WriteData".
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ControlUnit.vhdl
-# Compile Entity "ControlUnit"
-# Entity `ControlUnit' has been skipped - no difference detected.
-# Compile Architecture "Arch_ControlUnit" of Entity "ControlUnit"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\DataMemory.vhdl
-# Compile Entity "DataMemory"
-# Entity `DataMemory' has been skipped - no difference detected.
-# Compile Architecture "arch" of Entity "DataMemory"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\DataPath.vhdl
-# Compile Entity "DataPath"
-# Entity `DataPath' has been skipped - no difference detected.
-# Compile Architecture "Arch_DataPath" of Entity "DataPath"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\InstructionMemory.vhdl
-# Compile Entity "InstructionMemory"
-# Entity `InstructionMemory' has been skipped - no difference detected.
-# Compile Architecture "Arch_InstructionMemory" of Entity "InstructionMemory"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\MIPS.vhdl
-# Compile Entity "MIPS"
-# Entity `MIPS' has been skipped - no difference detected.
-# Compile Architecture "Arch_MIPS" of Entity "MIPS"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Multiplexer.vhdl
-# Compile Entity "Multiplexer"
-# Entity `Multiplexer' has been skipped - no difference detected.
-# Compile Architecture "Arch_Multiplexer" of Entity "Multiplexer"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\Packages.vhdl
-# Compile Package "packages"
-# Package `packages' has been skipped - no difference detected.
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ProgramCounter.vhdl
-# Compile Entity "ProgramCounter"
-# Entity `ProgramCounter' has been skipped - no difference detected.
-# Compile Architecture "Arch_ProgramCounter" of Entity "ProgramCounter"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\RegisterFiles.vhdl
-# Compile Entity "RegisterFiles"
-# Entity `RegisterFiles' has been skipped - no difference detected.
-# Compile Architecture "Arch_RegisterFiles" of Entity "RegisterFiles"
-# File: .\Schematic.vhd
-# Compile Entity "Schematic"
-# Entity `Schematic' has been skipped - no difference detected.
-# Compile Architecture "Schematic" of Entity "Schematic"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\ShiftLeft2.vhdl
-# Compile Entity "ShiftLeft2"
-# Entity `ShiftLeft2' has been skipped - no difference detected.
-# Compile Architecture "Arch_ShiftLeft2" of Entity "ShiftLeft2"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\sign_extender.vhdl
-# Compile Entity "SignExtender"
-# Entity `SignExtender' has been skipped - no difference detected.
-# Compile Architecture "Arch_Extender" of Entity "SignExtender"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\TestBench.vhdl
-# Compile Entity "testbench"
-# Entity `testbench' has been skipped - no difference detected.
-# Compile Architecture "test" of Entity "testbench"
-# File: D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\TopLevel.vhdl
-# Compile Entity "TopLevel"
-# Entity `TopLevel' has been skipped - no difference detected.
-# Compile Architecture "Arch_TopLevel" of Entity "TopLevel"
-# Compile failure 4 Errors 0 Warnings  Analysis time :  1.0 [s]

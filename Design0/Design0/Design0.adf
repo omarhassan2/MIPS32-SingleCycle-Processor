@@ -84,3 +84,11 @@ Selected=
 /\compile\BlockDiagram.vhd=-1
 [file_out:/Schematic.bde]
 /\compile\Schematic.vhd=-1
+[LocalVhdlSets]
+ReorderOnFirstRebuild=1
+EnableVHDL87Key=1
+NetlistCompilation=0
+ElaborationAfterCompilation=0
+MaxErrorsKey=100
+CompileWithDebug=1
+OptimizationLevel=2

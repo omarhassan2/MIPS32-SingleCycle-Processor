@@ -1,16 +1,16 @@
-timestamp=1715732620994
+timestamp=1715809084338
 
 [adder]
-A/arch_adder=A/Arch_Adder 21|./src/Adder.vhdl|36|1*161440
-B/arch_adder=3*72442
-H/arch_adder=0*164676
+A/arch_adder=A/Arch_Adder 21|./src/Adder.vhdl|36|1*219836
+B/arch_adder=3*105933
+H/arch_adder=0*196190
 R=./src/Adder.vhdl|25
 V=0*1348
 
 [alu]
-A/arch_alu=A/Arch_ALU 21|./src/ALU.vhdl|42|1*162869
-B/arch_alu=3*73015
-H/arch_alu=0*164994
+A/arch_alu=A/Arch_ALU 21|./src/ALU.vhdl|42|1*221265
+B/arch_alu=3*106506
+H/arch_alu=0*196508
 R=./src/ALU.vhdl|28
 V=0*5671
 
@@ -22,44 +22,44 @@ R=./compile/BlockDiagram.vhd|25
 V=0*24730
 
 [controlunit]
-A/arch_controlunit=A/Arch_ControlUnit 21|./src/ControlUnit.vhdl|36|1*165645
-B/arch_controlunit=3*76631
-H/arch_controlunit=0*166672
+A/arch_controlunit=A/Arch_ControlUnit 21|./src/ControlUnit.vhdl|36|1*224041
+B/arch_controlunit=3*110122
+H/arch_controlunit=0*198186
 R=./src/ControlUnit.vhdl|22
 V=0*28965
 
 [datamemory]
-A/arch=21|./src/DataMemory.vhdl|38|1*170086
-B/arch=3*84875
-H/arch=0*168933
+A/arch=21|./src/DataMemory.vhdl|38|1*228482
+B/arch=3*118366
+H/arch=0*200447
 R=./src/DataMemory.vhdl|26
 V=0*33706
 
 [datapath]
-A/arch_datapath=A/Arch_DataPath 21|./src/DataPath.vhdl|46|1*172401
-B/arch_datapath=3*86007
-H/arch_datapath=0*170640
+A/arch_datapath=A/Arch_DataPath 21|./src/DataPath.vhdl|46|1*230797
+B/arch_datapath=3*119498
+H/arch_datapath=0*202154
 R=./src/DataPath.vhdl|23
 V=0*112434
 
 [instructionmemory]
-A/arch_instructionmemory=A/Arch_InstructionMemory 21|./src/InstructionMemory.vhdl|36|1*188623
-B/arch_instructionmemory=3*87976
-H/arch_instructionmemory=0*176228
+A/arch_instructionmemory=A/Arch_InstructionMemory 21|./src/InstructionMemory.vhdl|36|1*247019
+B/arch_instructionmemory=3*121467
+H/arch_instructionmemory=0*207742
 R=./src/InstructionMemory.vhdl|25
 V=0*45216
 
 [mips]
-A/arch_mips=A/Arch_MIPS 21|./src/MIPS.vhdl|33|1*192393
-B/arch_mips=3*98263
-H/arch_mips=0*185292
+A/arch_mips=A/Arch_MIPS 21|./src/MIPS.vhdl|33|1*250789
+B/arch_mips=3*131754
+H/arch_mips=0*216806
 R=./src/MIPS.vhdl|20
 V=0*119842
 
 [multiplexer]
-A/arch_multiplexer=A/Arch_Multiplexer 21|./src/Multiplexer.vhdl|40|1*200480
-B/arch_multiplexer=3*98679
-H/arch_multiplexer=0*187853
+A/arch_multiplexer=A/Arch_Multiplexer 21|./src/Multiplexer.vhdl|40|1*258876
+B/arch_multiplexer=3*132170
+H/arch_multiplexer=0*219367
 R=./src/Multiplexer.vhdl|27
 V=0*48098
 
@@ -69,50 +69,50 @@ R=./src/Packages.vhdl|22
 V=0*59554
 
 [programcounter]
-A/arch_programcounter=A/Arch_ProgramCounter 21|./src/ProgramCounter.vhdl|35|1*202222
-B/arch_programcounter=3*99518
-H/arch_programcounter=0*188255
+A/arch_programcounter=A/Arch_ProgramCounter 21|./src/ProgramCounter.vhdl|35|1*260618
+B/arch_programcounter=3*133009
+H/arch_programcounter=0*219769
 R=./src/ProgramCounter.vhdl|23
 V=0*82963
 
 [registerfiles]
-A/arch_registerfiles=A/Arch_RegisterFiles 21|./src/RegisterFiles.vhdl|38|1*203901
-B/arch_registerfiles=3*100328
-H/arch_registerfiles=0*188754
+A/arch_registerfiles=A/Arch_RegisterFiles 21|./src/RegisterFiles.vhdl|38|1*262297
+B/arch_registerfiles=3*133819
+H/arch_registerfiles=0*220268
 R=./src/RegisterFiles.vhdl|21
 V=0*88239
 
 [schematic]
-A/schematic=A/Schematic 24|.\src\Schematic.bde|10000|1*207262
-H/schematic=0*190676
+A/schematic=A/Schematic 24|.\src\Schematic.bde|10000|1*265658
+H/schematic=0*222190
 R=./compile/Schematic.vhd|25
 V=0*92241
 
 [shiftleft2]
-A/arch_shiftleft2=A/Arch_ShiftLeft2 21|./src/ShiftLeft2.vhdl|35|1*207594
-B/arch_shiftleft2=3*101986
-H/arch_shiftleft2=0*190988
+A/arch_shiftleft2=A/Arch_ShiftLeft2 21|./src/ShiftLeft2.vhdl|35|1*265990
+B/arch_shiftleft2=3*135477
+H/arch_shiftleft2=0*222502
 R=./src/ShiftLeft2.vhdl|24
 V=0*93702
 
 [signextender]
-A/arch_extender=A/Arch_Extender 21|./src/sign_extender.vhdl|33|1*209016
-B/arch_extender=3*102516
-H/arch_extender=0*191397
+A/arch_extender=A/Arch_Extender 21|./src/sign_extender.vhdl|33|1*267412
+B/arch_extender=3*136007
+H/arch_extender=0*222911
 R=./src/sign_extender.vhdl|22
 V=0*96137
 
 [testbench]
-A/test=21|./src/TestBench.vhdl|26|1*210430
-B/test=3*103308
-H/test=0*191824
+A/test=21|./src/TestBench.vhdl|26|1*268826
+B/test=3*136799
+H/test=0*223338
 R=./src/TestBench.vhdl|22
 V=0*99591
 
 [toplevel]
-A/arch_toplevel=A/Arch_TopLevel 21|./src/TopLevel.vhdl|33|1*213356
-B/arch_toplevel=3*104636
-H/arch_toplevel=0*193635
+A/arch_toplevel=A/Arch_TopLevel 21|./src/TopLevel.vhdl|33|1*271752
+B/arch_toplevel=3*138127
+H/arch_toplevel=0*225149
 R=./src/TopLevel.vhdl|21
 V=0*103371
 
@@ -120,43 +120,43 @@ V=0*103371
 ./compile/BlockDiagram.vhd~BlockDiagram=0*7794*8016
 ./compile/BlockDiagram.vhd~BlockDiagramBlockDiagram=0*20868*24263
 ./compile/Schematic.vhd~Schematic=0*91458*91612
-./compile/Schematic.vhd~SchematicSchematic=0*190769*190906
+./compile/Schematic.vhd~SchematicSchematic=0*222283*222420
 ./src/ALU.vhdl~ALU=0*2479*2908
-./src/ALU.vhdl~Arch_ALUALU=0*165681*166606
+./src/ALU.vhdl~Arch_ALUALU=0*197195*198120
 ./src/Adder.vhdl~Adder=0*0*302
-./src/Adder.vhdl~Arch_AdderAdder=0*164771*164922
-./src/ControlUnit.vhdl~Arch_ControlUnitControlUnit=0*167349*168843
+./src/Adder.vhdl~Arch_AdderAdder=0*196285*196436
+./src/ControlUnit.vhdl~Arch_ControlUnitControlUnit=0*198863*200357
 ./src/ControlUnit.vhdl~ControlUnit=0*25005*25480
 ./src/DataMemory.vhdl~DataMemory=0*30741*31113
-./src/DataMemory.vhdl~archDataMemory=0*170114*170564
-./src/DataPath.vhdl~Arch_DataPathDataPath=0*174228*176147
+./src/DataMemory.vhdl~archDataMemory=0*201628*202078
+./src/DataPath.vhdl~Arch_DataPathDataPath=0*205742*207661
 ./src/DataPath.vhdl~DataPath=0*104362*105050
-./src/InstructionMemory.vhdl~Arch_InstructionMemoryInstructionMemory=0*183825*185184
+./src/InstructionMemory.vhdl~Arch_InstructionMemoryInstructionMemory=0*215339*216698
 ./src/InstructionMemory.vhdl~InstructionMemory=0*35027*35379
-./src/MIPS.vhdl~Arch_MIPSMIPS=0*186888*187784
+./src/MIPS.vhdl~Arch_MIPSMIPS=0*218402*219298
 ./src/MIPS.vhdl~MIPS=0*115880*116249
-./src/Multiplexer.vhdl~Arch_MultiplexerMultiplexer=0*187960*188165
+./src/Multiplexer.vhdl~Arch_MultiplexerMultiplexer=0*219474*219679
 ./src/Multiplexer.vhdl~Multiplexer=0*46297*46697
 ./src/Packages.vhdl~packages=0*49820*52886
-./src/ProgramCounter.vhdl~Arch_ProgramCounterProgramCounter=0*188368*188655
+./src/ProgramCounter.vhdl~Arch_ProgramCounterProgramCounter=0*219882*220169
 ./src/ProgramCounter.vhdl~ProgramCounter=0*81335*81665
-./src/RegisterFiles.vhdl~Arch_RegisterFilesRegisterFiles=0*189970*190580
+./src/RegisterFiles.vhdl~Arch_RegisterFilesRegisterFiles=0*221484*222094
 ./src/RegisterFiles.vhdl~RegisterFiles=0*84218*84790
-./src/ShiftLeft2.vhdl~Arch_ShiftLeft2ShiftLeft2=0*191093*191310
+./src/ShiftLeft2.vhdl~Arch_ShiftLeft2ShiftLeft2=0*222607*222824
 ./src/ShiftLeft2.vhdl~ShiftLeft2=0*92327*92609
 ./src/TestBench.vhdl~testbench=0*97209*97409
-./src/TestBench.vhdl~testtestbench=0*193064*193561
-./src/TopLevel.vhdl~Arch_TopLevelTopLevel=0*195184*196109
+./src/TestBench.vhdl~testtestbench=0*224578*225075
+./src/TopLevel.vhdl~Arch_TopLevelTopLevel=0*226698*227623
 ./src/TopLevel.vhdl~TopLevel=0*99674*99996
-./src/sign_extender.vhdl~Arch_ExtenderSignExtender=0*191498*191734
+./src/sign_extender.vhdl~Arch_ExtenderSignExtender=0*223012*223248
 ./src/sign_extender.vhdl~SignExtender=0*94769*95032
-ModifyID=327
+ModifyID=417
 Version=73
 
 [~MFT]
-0=335|0design0.mgf|196109|74799
-1=82|1design0.mgf|213356|146215
-3=78|3design0.mgf|104636|72023
+0=425|0design0.mgf|227623|106313
+1=111|1design0.mgf|271752|204279
+3=106|3design0.mgf|138127|105514
 
 [~U]
 adder=Adder 11|0*682|0*873

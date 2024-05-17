@@ -1,4 +1,4 @@
-327
+417
 ~E 1 "./src/MIPS.vhdl" 20 mips
 ~A 1 "./src/MIPS.vhdl" 33 arch_mips
 ~E 1 "./src/ControlUnit.vhdl" 22 controlunit

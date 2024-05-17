@@ -7,9 +7,9 @@
 --
 ---------------------------------------------------------------------------------------------------
 --
--- File        : D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\compile\BlockDiagram.vhd
--- Generated   : Wed May 15 03:11:23 2024
--- From        : D:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\BlockDiagram.bde
+-- File        : d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\compile\BlockDiagram.vhd
+-- Generated   : Thu May 16 00:38:00 2024
+-- From        : d:\College\CSE_2_Term_2\Hardware Design\Project\MIPS32-SingleCycle-Processor\design0\design0\src\BlockDiagram.bde
 -- By          : Bde2Vhdl ver. 2.6
 --
 ---------------------------------------------------------------------------------------------------
