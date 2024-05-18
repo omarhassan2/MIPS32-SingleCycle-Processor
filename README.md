@@ -1,6 +1,4 @@
-# Single-Cycle MIPS Processor
-
-🚀 Welcome to the MIPS ISA 32 bit Single Cycle processor repository! 🚀
+# 🚀 Single-Cycle MIPS Processor 🚀
 
 Welcome to the Single-Cycle MIPS Processor repository! This project demonstrates the design and implementation of a single-cycle MIPS (Microprocessor without Interlocked Pipeline Stages) processor. The MIPS architecture is a classic RISC (Reduced Instruction Set Computer) architecture, and this single-cycle version executes each instruction in one clock cycle.
 
