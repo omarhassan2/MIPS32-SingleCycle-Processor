@@ -44,11 +44,11 @@ ARCHITECTURE Arch_DataMemory OF DataMemory IS
 BEGIN
 	PROCESS(clk,Address)
 	BEGIN
-		IF (FALLING_EDGE(clk)) THEN
+		IF (RISING_EDGE(clk)) THEN
 			IF (WriteEnable = '1') THEN 
 				Data(TO_INTEGER(UNSIGNED(Address))) <= WriteData;
 			ELSE   
-				IF(Address < 1023) THEN
+				IF(Address < 1023) THEN 
 					ReadData <= Data(TO_INTEGER(UNSIGNED(Address)));
 				END IF;	
 			END IF;	 
