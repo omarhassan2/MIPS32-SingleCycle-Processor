@@ -16,7 +16,7 @@ The Single-Cycle MIPS Processor project aims to provide a clear understanding of
 
 ## Architecture Overview
 
-![ARCHITECTURE](/MIPS32-SingleCycle-Processor.png)
+![ARCHITECTURE](/MIPS32-SingleCycle-Processor.jpg)
 
 The single-cycle MIPS processor architecture includes the following main components:
 
